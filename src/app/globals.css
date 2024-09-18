@@ -2,26 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+    font-family: 'Lato<3';
+    /*a name to be used later*/
+    src: url('/fonts/lato.regular.ttf');
+    /*URL to font*/
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  body {
+    background: #30283B;
   }
-}
+  #root {
+    font-family: 'Lato<3';
+    color: aliceblue;
+    
+  }
+
+  .active {
+    color: #01A93E;
+  }
+
+  .cover {
+    object-fit: cover;
+    width: 100%;
+ }
