@@ -9,17 +9,56 @@
     /*URL to font*/
   }
 
-  body {
-    background: #30283B;
+  @media (max-width:768px) {
+    .container {
+      width: 100%;
+    }
   }
+  
   #root {
     font-family: 'Lato<3';
     color: aliceblue;
-    
   }
 
+  body {
+    background: #30283B;
+  }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
+  padding-bottom: 80px;
+}
   .active {
     color: #01A93E;
+  }
+
+  .Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E38F52;
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .Button:hover {
+    background-color: #01A93E;
+  }
+
+  .imagetext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .cover {

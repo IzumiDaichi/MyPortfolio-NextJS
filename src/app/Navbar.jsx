@@ -45,7 +45,7 @@ const Navbar = () => {
               </li>
             </Link>
 
-            <Link href="/about">
+            <Link href="/contact">
               <li className="ml-10 text-xl font-light hover:text-orange-400 transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
                 Contact
               </li>
@@ -95,7 +95,7 @@ const Navbar = () => {
             className="py-4 cursor-pointer text-white hover:bg-[#01A93E] hover:p-4 font-semibold text-2xl">
               About</li>
             </Link>
-            <Link href='/'>
+            <Link href='/contact'>
             <li
             onClick={() => setMenuOpen(false)}
             className="py-4 cursor-pointer text-white hover:bg-[#01A93E] hover:p-4 font-semibold text-2xl">
