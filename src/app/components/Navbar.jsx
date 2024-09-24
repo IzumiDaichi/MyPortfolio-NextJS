@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import Logo from "./logo/Logo.png";
-import Logo2 from "./logo/Logo2.png";
+import Logo from "../logo/Logo.png";
+import Logo2 from "../logo/Logo2.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -27,26 +27,26 @@ const Navbar = () => {
 
         <div className="flex items-center flex-1 pl-5">
           <Link href="/">
-            <span className=" text-2xl font-bold text-white ">PORTFOLIO</span>
+            <span className=" text-2xl font-bold text-white hover:text-[#0C9C3D]">PORTFOLIO</span>
           </Link>
         </div>
 
         <div className="flex items-center sm:flex">
           <ul className="hidden sm:flex">
             <Link href="/">
-              <li className="ml-10 text-xl font-light hover:text-orange-400 transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
+              <li className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
                 Home
               </li>
             </Link>
 
             <Link href="/about">
-              <li className="ml-10 text-xl font-light hover:text-orange-400 transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
+              <li className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
                 About
               </li>
             </Link>
 
             <Link href="/contact">
-              <li className="ml-10 text-xl font-light hover:text-orange-400 transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
+              <li className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
                 Contact
               </li>
             </Link>
@@ -77,6 +77,7 @@ const Navbar = () => {
             <Image 
             src={Logo2}
             width={280}
+            alt="logo"
             className="py-4 "
             />
           </Link>

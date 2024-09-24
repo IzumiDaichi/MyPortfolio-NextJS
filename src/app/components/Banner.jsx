@@ -1,8 +1,7 @@
 "use client"
 import React from 'react'
-import BannerImg from './images/Banner.png'
+import BannerImg from '../images/Banner.png'
 import Image from 'next/image';
-import Link from 'next/link';
 
 function scrollToArt() {
     const child = document.querySelector("#social");
@@ -18,16 +17,14 @@ function scrollToArt() {
   
   const Banner = () => {
     return (
-      <div className="imagecontainer relative cursor-pointer">
-        <Link href="#portfolios">
+      <div className="imagecontainer hover:cursor-pointer relative">
         <Image
-          className="bannerimg z-10 w-screen max-h-screen brightness-50"
+          className="bannerimg z-10 w-screen max-h-screen brightness-50 hover:brightness-[.80]"
           src={BannerImg}
           alt="Banner"
           priority
         />
-        <h1 className="imagetext text-6xl text-white">Portfolios</h1>
-        </Link>
+        <h1 className="imagetext text-6xl text-white hover:text-[#FB923C]">Portfolios</h1>
       </div>
       
     );

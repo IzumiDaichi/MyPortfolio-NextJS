@@ -1,6 +1,10 @@
 import React from 'react'
-import Banner from '../Banner'
-import Profile from '../Profile'
+import Banner from '../components/Banner'
+import Profile from '../components/Profile'
+import ArtPortfolios from '../components/ArtPortfolios'
+import UIUXPortfolios from '../components/UIUXPortfolios'
+import About from '../about/page'
+import Contact from './../contact/page';
 
 function Home() {
   return (
@@ -8,6 +12,12 @@ function Home() {
       <div>
           <Banner />
           <Profile />
+          <hr className="solid my-11 mx-32"/>
+          <h1 className='text-black font-bold text-3xl md:text-5xl justify-center flex flex-row'>Portfolios</h1>
+          <ArtPortfolios/>
+          <UIUXPortfolios/>
+          <About/>
+          <Contact/>
       </div>
     </div>
   )

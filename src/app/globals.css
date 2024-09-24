@@ -3,65 +3,102 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Lato<3';
-    /*a name to be used later*/
-    src: url('/fonts/lato.regular.ttf');
-    /*URL to font*/
+  font-family: "Lato<3";
+  /*a name to be used later*/
+  src: url("/fonts/lato.regular.ttf");
+  /*URL to font*/
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/*PROFILE.JS CSS*/
+@media (min-width: 450px) {
+  .pic-container {
+    margin-right: 32px;
+  }
+}
+
+@media (max-width: 450px) {
+  .text-container {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
-  @media (max-width:768px) {
-    .container {
-      width: 100%;
-    }
+  .pic-container {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
   }
-  
-  #root {
-    font-family: 'Lato<3';
-    color: aliceblue;
-  }
+}
 
-  body {
-    background: #30283B;
-  }
+#root {
+  font-family: "Lato<3";
+  color: aliceblue;
+}
+
+body {
+  background: #30283b;
+}
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  margin-top: 110px;
+  margin-top: 68px;
+  margin-bottom: 3%;
   margin-left: auto;
   margin-right: auto;
   height: fit-content;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
 }
-  .active {
-    color: #01A93E;
-  }
 
-  .Button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #E38F52;
-    color: white;
-    padding: 1rem;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .Button:hover {
-    background-color: #01A93E;
-  }
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
+  padding-bottom: 20px;
+}
+.active {
+  color: #01a93e;
+}
 
-  .imagetext {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e38f52;
+  color: white;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
 
-  .cover {
-    object-fit: cover;
-    width: 100%;
- }
+.Button:hover {
+  background-color: #01a93e;
+}
+
+.imagetext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cover {
+  object-fit: cover;
+  width: 100%;
+}
+
