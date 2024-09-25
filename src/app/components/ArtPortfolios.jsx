@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 function ArtPortfolios() {
   return (
     <motion.div
-      variants={fadeIn("right", 0.4)}
+      variants={fadeIn("right", 0.8)}
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.2 }}

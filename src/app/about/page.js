@@ -1,18 +1,13 @@
 "use client"
-import Profile from '../components/Profile'
+import ProfileCard from '../components/ProfileCard'
 import React from "react";
-import { fadeIn } from "../components/framer";
-import { motion } from "framer-motion";
-import Aboutme from '../components/aboutme';
+import Aboutme from '../components/Aboutme';
+import MyWorkshop from '../components/MyWorkshop'
 function page() {
   return (
     <div className="container h-dvh bg-white overflow-hidden rounded-lg shadow-lg flex-col">
-    <motion.div
-    variants={fadeIn("down",0.4)}
-    initial="hidden"
-    whileInView={"show"} 
-    viewport={{once: true, amount: 0.2 }}
-       
+    <div
+  
     className="bannerimg w-screen max-h-screen bg-[#364971] overflow-hidden rounded-lg shadow-lg">
       <div className="mt-3 mb-3 text-center">
         
@@ -20,13 +15,18 @@ function page() {
           /About Me
         </h1>
       </div>
-    </motion.div>
-    <Profile />
-    <div className="">
-      <Aboutme/>
     </div>
-    
-      
+    <div className='flex flex-col md:flex-row justifiy-between place-items-center'>
+    <div className=" py-8">
+    <ProfileCard />
+    </div>
+    <div className="text-container flex-1 md:order-1 mt-4">
+      <Aboutme/>
+      </div>
+    </div>
+    <div className="flex flex-cols-2 mt-4">
+      <MyWorkshop/>
+      </div>
     </div>
   );
 }
