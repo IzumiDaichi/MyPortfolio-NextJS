@@ -1,35 +1,53 @@
-"use client"
-import ProfileCard from '../components/ProfileCard'
+"use client";
+
+import ProfileCard from "../../components/ui/ProfileCard";
+
 import React from "react";
-import Aboutme from '../components/Aboutme';
-import MyWorkshop from '../components/MyWorkshop'
+
+import Intro from "../../components/ui/Introduction";
+
+import MyWorkshop from "../../components/ui/MyWorkshop";
+
+import MyArtStudio from "../../components/ui/MyArtStudio";
+
+import MyInterests from "../../components/ui/MyInterests";
+
 function page() {
   return (
     <div className="container h-dvh bg-white overflow-hidden rounded-lg shadow-lg flex-col">
-    <div
-  
-    className="bannerimg w-screen max-h-screen bg-[#364971] overflow-hidden rounded-lg shadow-lg">
-      <div className="mt-3 mb-3 text-center">
-        
-      <h1 className="text-[#E3EAF5] font-bold text-3xl md:text-5xl mt-0">
-          /About Me
-        </h1>
+      <div className="bannerimg w-screen max-h-screen bg-[#364971] overflow-hidden rounded-lg shadow-lg">
+        <div className="mt-3 mb-3 text-center">
+          <h1 className="text-[#E3EAF5] font-bold text-3xl md:text-5xl mt-0">
+            /About Me
+          </h1>
+        </div>
       </div>
-    </div>
-    <div className='flex flex-col md:flex-row justifiy-between place-items-center'>
-    <div className=" py-8">
-    <ProfileCard />
-    </div>
-    <div className="text-container flex-1 md:order-1 mt-4">
-      <Aboutme/>
+
+      <div className="flex flex-col md:flex-row justifiy-between place-items-center lg:justify-center">
+        <div className=" flex-1 py-8">
+          <ProfileCard />
+        </div>
+
+        <div className="text-container flex-1 md:order-1 mt-4">
+          <Intro />
+        </div>
       </div>
-    </div>
-    <div className="flex flex-cols-2 mt-4">
-      <MyWorkshop/>
+
+      <div className="my-4">
+        <MyInterests />
+      </div>
+
+      <div className="mt-4 justify-between md:flex">
+        <div className="px-5">
+          <MyWorkshop />
+        </div>
+
+        <div className="px-5">
+          <MyArtStudio />
+        </div>
       </div>
     </div>
   );
 }
 
-
-export default page
+export default page;
