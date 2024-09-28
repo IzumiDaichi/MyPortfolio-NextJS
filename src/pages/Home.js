@@ -1,10 +1,10 @@
 import React from "react";
-import Banner from "../../components/ui/Banner";
-import Profile from "../../components/ui/Profile";
-import ArtPortfolios from "../../components/ui/ArtPortfolios";
-import UIUXPortfolios from "../../components/ui/UIUXPortfolios";
-import About from "../about/page";
-import Contact from "./../contact/page";
+import Banner from "../components/homeComponents/Banner";
+import Profile from "../components/homeComponents/Profile";
+import ArtPortfolios from "../components/homeComponents/ArtPortfolios";
+import UIUXPortfolios from "../components/homeComponents/UIUXPortfolios";
+import About from "./About";
+import Contact from "./Contact";
 
 function Home() {
   return (

@@ -1,18 +1,18 @@
 "use client";
 
-import ProfileCard from "../../components/ui/ProfileCard";
-
+import ProfileCard from "../components/aboutComponents/ProfileCard";
+import Test from "../components/aboutComponents/Test";
 import React from "react";
 
-import Intro from "../../components/ui/Introduction";
+import Intro from "../components/aboutComponents/Introduction";
 
-import MyWorkshop from "../../components/ui/MyWorkshop";
+import MyWorkshop from "../components/aboutComponents/MyWorkshop";
 
-import MyArtStudio from "../../components/ui/MyArtStudio";
+import MyArtStudio from "../components/aboutComponents/MyArtStudio";
 
-import MyInterests from "../../components/ui/MyInterests";
+import MyInterests from "../components/aboutComponents/MyInterests";
 
-function page() {
+function About() {
   return (
     <div className="container h-dvh bg-white overflow-hidden rounded-lg shadow-lg flex-col">
       <div className="bannerimg w-screen max-h-screen bg-[#364971] overflow-hidden rounded-lg shadow-lg">
@@ -33,8 +33,9 @@ function page() {
         </div>
       </div>
 
-      <div className="my-4">
-        <MyInterests />
+      <div className="my-4 justify-center">
+      <h1 className="font-bold text-3xl ml-8">My Interests</h1>
+        <Test />
       </div>
 
       <div className="mt-4 justify-between md:flex">
@@ -50,4 +51,4 @@ function page() {
   );
 }
 
-export default page;
+export default About;

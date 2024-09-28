@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import { fadeIn } from "../../lib/framer";
+import { fadeIn } from "../lib/framer";
 import { motion } from "framer-motion";
 
-function contact() {
+function Contact() {
   return (
     <div className="container2 bg-white overflow-hidden rounded-lg shadow-lg flex-col">
       <motion.div
@@ -25,4 +25,4 @@ function contact() {
   );
 }
 
-export default contact;
+export default Contact;

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import ProfileImg from "/public/images/Profile.png";
-import Socials from "../ui/Socials";
+import Socials from "../homeComponents/Socials";
 import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";
 function ProfileCard() {
