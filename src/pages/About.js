@@ -1,7 +1,6 @@
 "use client";
 
 import ProfileCard from "../components/aboutComponents/ProfileCard";
-import Test from "../components/aboutComponents/Test";
 import React from "react";
 
 import Intro from "../components/aboutComponents/Introduction";
@@ -35,7 +34,7 @@ function About() {
 
       <div className="my-4 justify-center">
       <h1 className="font-bold text-3xl ml-8">My Interests</h1>
-        <Test />
+        <MyInterests />
       </div>
 
       <div className="mt-4 justify-between md:flex">
