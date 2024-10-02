@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 function UIUXPortfolios() {
   return (
     <motion.div
+      id="uiux"
       variants={fadeIn("left", 0.4)}
       initial="hidden"
       whileInView={"show"}

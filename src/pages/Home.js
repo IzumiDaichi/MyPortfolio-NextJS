@@ -13,7 +13,7 @@ function Home() {
         <Banner />
         <Profile />
         <hr className="solid my-11 mx-32" />
-        <h1 className="text-black font-bold text-3xl md:text-5xl justify-center flex flex-row">
+        <h1 id="portfolio" className="text-black font-bold text-3xl md:text-5xl justify-center flex flex-row">
           Portfolios
         </h1>
         <ArtPortfolios />

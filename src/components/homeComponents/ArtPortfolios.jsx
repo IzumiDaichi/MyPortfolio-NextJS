@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 function ArtPortfolios() {
   return (
     <motion.div
+      id="art"
       variants={fadeIn("right", 0.8)}
       initial="hidden"
       whileInView={"show"}

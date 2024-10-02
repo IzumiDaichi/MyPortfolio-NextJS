@@ -13,7 +13,7 @@ import MyInterests from "../components/aboutComponents/MyInterests";
 
 function About() {
   return (
-    <div className="container h-dvh bg-white overflow-hidden rounded-lg shadow-lg flex-col">
+    <div id="about" className="container h-dvh bg-white overflow-hidden rounded-lg shadow-lg flex-col">
       <div className="bannerimg w-screen max-h-screen bg-[#364971] overflow-hidden rounded-lg shadow-lg">
         <div className="mt-3 mb-3 text-center">
           <h1 className="text-[#E3EAF5] font-bold text-3xl md:text-5xl mt-0">

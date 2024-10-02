@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 function socials() {
   return (
     <motion.div
+      id="social"
       variants={fadeIn("down", 0.4)}
       initial="hidden"
       whileInView={"show"}

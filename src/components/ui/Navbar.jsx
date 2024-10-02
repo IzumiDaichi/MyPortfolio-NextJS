@@ -4,6 +4,7 @@ import Logo from "/public/logo/Logo.png";
 import Logo2 from "/public/logo/Logo2.png";
 import Image from "next/image";
 import Link from "next/link";
+import ScrollIntoView from 'react-scroll-into-view'
 import { useState } from "react";
 import {
   AiOutlineClose,
@@ -47,11 +48,11 @@ const Navbar = () => {
               </li>
             </Link>
 
-            <Link href="/about">
+            <ScrollIntoView selector="#about">
               <li className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
                 About
               </li>
-            </Link>
+            </ScrollIntoView>
 
             <Link href="/contact">
               <li className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
@@ -67,6 +68,14 @@ const Navbar = () => {
           <AiOutlineMenu size={25} />
         </div>
       </div>
+
+
+
+
+
+{/* MOBILE VIEW NAV BAR */}
+
+
 
       <div
         className={
@@ -95,14 +104,14 @@ const Navbar = () => {
                 Home
               </li>
             </Link>
-            <Link href="/about">
+            <ScrollIntoView selector="#about">
               <li
                 onClick={() => setMenuOpen(false)}
                 className="py-4 cursor-pointer text-white hover:bg-[#01A93E] hover:p-4 font-semibold text-2xl"
               >
                 About
               </li>
-            </Link>
+            </ScrollIntoView>
             <Link href="/contact">
               <li
                 onClick={() => setMenuOpen(false)}
