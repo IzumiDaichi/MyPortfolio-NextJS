@@ -7,6 +7,8 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './Carousel.css';
+import { fadeIn } from "../../lib/framer";
+import { motion } from "framer-motion";
 import slide_image_1 from '/public/Images/SliderImg.webp';
 import slide_image_2 from '/public/Images/SliderImg2.webp';
 import slide_image_3 from '/public/Images/SliderImg3.webp';
@@ -23,7 +25,12 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 function MyInterests() {
   return (
-
+    <motion.div
+    id="art"
+    variants={fadeIn("up", 0.2)}
+    initial="hidden"
+    whileInView={"show"}
+    viewport={{ once: false, amount: 0.10 }}>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -86,7 +93,7 @@ function MyInterests() {
           <div className="swiper-pagination"></div>
         </div>
       </Swiper>
-  
+  </motion.div>
   );
 }
 
