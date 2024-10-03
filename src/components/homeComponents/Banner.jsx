@@ -8,7 +8,7 @@ const Banner = () => {
   return (
     <ScrollIntoView
     selector="#portfolio">
-    <div className="imagecontainer hover:cursor-pointer relative">
+    <div className="imagecontainer hover:cursor-pointer relative ">
       <Image
         className="bannerimg z-10 w-screen max-h-screen brightness-50 hover:brightness-[.80]"
         src={BannerImg}
