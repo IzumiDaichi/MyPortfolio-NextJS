@@ -28,7 +28,7 @@ const Navbar = () => {
           <Image
             src={Logo}
             alt="Logo"
-            className="cover cursor-pointer inline size-12 align-middle pl-2 mx-4"
+            className="object-cover w-full cursor-pointer inline size-12 align-middle mx-4"
           />
         </Link>
 
@@ -54,11 +54,11 @@ const Navbar = () => {
               </li>
             </ScrollIntoView>
 
-            <Link href="/contact">
+            <ScrollIntoView selector="#contact">
               <li className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
                 Contact
               </li>
-            </Link>
+            </ScrollIntoView>
           </ul>
         </div>
         <div
@@ -68,14 +68,6 @@ const Navbar = () => {
           <AiOutlineMenu size={25} />
         </div>
       </div>
-
-
-
-
-
-{/* MOBILE VIEW NAV BAR */}
-
-
 
       <div
         className={
@@ -112,14 +104,14 @@ const Navbar = () => {
                 About
               </li>
             </ScrollIntoView>
-            <Link href="/contact">
+            <ScrollIntoView selector="#contact">
               <li
                 onClick={() => setMenuOpen(false)}
                 className="py-4 cursor-pointer text-white hover:bg-[#01A93E] hover:p-4 font-semibold text-2xl"
               >
                 Contact
               </li>
-            </Link>
+            </ScrollIntoView>
           </ul>
         </div>
         <div className="flex flex-row justify-around pt-10 items-center">

@@ -15,7 +15,7 @@ function Profile() {
 
   return (
     <div className="mt-16 flex flex-col items-center md:flex-row">
-      <div className="pic-container inline-block px-10 md:mr-0 md:mb-4">
+      <div className=" inline-block px-10 md:mr-0 md:mb-4">
         <Image
           className="rounded-full object-cover w-48 h-48 md:w-72 md:h-72"
           src={ProfileImg}
@@ -29,7 +29,7 @@ function Profile() {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false }}
-        className="text-container flex-1 md:order-1"
+        className="flex-1 md:order-1"
       >
         <h1 className="text-black font-bold text-3xl md:text-5xl mt-0">
           JAKE <br /> RUPISAN

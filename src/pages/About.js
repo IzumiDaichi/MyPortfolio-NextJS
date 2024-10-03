@@ -13,13 +13,16 @@ import MyInterests from "../components/aboutComponents/MyInterests";
 
 function About() {
   return (
-    <div id="about" className="container h-dvh bg-white overflow-hidden rounded-lg shadow-lg flex-col">
-      <div className="bannerimg w-screen max-h-screen bg-[#364971] overflow-hidden rounded-lg shadow-lg">
-        <div className="mt-3 mb-3 text-center">
-          <h1 className="text-[#E3EAF5] font-bold text-3xl md:text-5xl mt-0">
+    <div
+
+      id="about"
+      className="container h-fit bg-white rounded-lg shadow-lg flex-col">
+
+
+      <div className="w-screen h-fit bg-[#364971] rounded-lg shadow-lg text-center">
+          <h1 className="text-[#E3EAF5] font-bold text-3xl md:text-5xl my-3">
             /About Me
           </h1>
-        </div>
       </div>
 
       <div className="flex flex-col md:flex-row justifiy-between place-items-center lg:justify-center">
@@ -33,16 +36,16 @@ function About() {
       </div>
 
       <div className="my-4 justify-center">
-      <h1 className="font-bold text-3xl ml-8">My Interests</h1>
+        <h1 className="font-bold text-3xl ml-8">My Interests</h1>
         <MyInterests />
       </div>
 
       <div className="mt-4 justify-between md:flex">
-        <div className="px-5">
+        <div className="px-5 pb-5">
           <MyWorkshop />
         </div>
 
-        <div className="px-5">
+        <div className="px-5 pb-5">
           <MyArtStudio />
         </div>
       </div>

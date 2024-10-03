@@ -23,7 +23,7 @@ export default function MyWorkshop() {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.1 }}
-        className="grid grid-cols-2 gap-4 "
+        className="grid grid-cols-2 gap-4  "
       >
         <div className="bg-gray-800 rounded-lg p-4 text-white grid grid-cols-2 items-center">
           <Image src={Html} width="50" height="50" alt="Icon 1" />

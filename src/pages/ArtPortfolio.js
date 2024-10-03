@@ -1,6 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import Image from "next/image";
-import "../components/portfolioComponents/portfolio.css";
+import Link from "next/link"
+import '../app/globals.css'
+import { fadeIn } from "../lib/framer";
+import { motion } from "framer-motion";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+
+
 import portfolio1 from "../components/portfolioComponents/portfolio1.webp";
 import portfolio2 from "../components/portfolioComponents/portfolio2.webp";
 import portfolio3 from "../components/portfolioComponents/portfolio3.webp";
@@ -138,25 +144,46 @@ const ArtPortfolio = () => {
     portfolio63,
 
   ];
-const getimg = (imgSrc) => {
-  console.warn(img)
+const [model, setModel] = useState(false);
+const [tempimgSrc, setTempImgSrc] = useState ('');
+
+const getImg = (imgSrc) => {
+  setTempImgSrc(imgSrc);
+  setModel(true);
 }
   return (
-    <div>
-      ArtPortfolio
+  <>
+  
+    <motion.div
+    className="grid grid-cols-3 items-center bg-[#364971]"
+    variants={fadeIn("down", 0.2)}
+    initial="hidden"
+    whileInView={"show"}
+    viewport={{ once: true, amount: 0.2 }}>
+      <Link href="/">
+        <h1 className="text-white flex justify-start pl-4 animate-pulse font-bold text-3xl"><IoIosArrowBack className="size-10" />Go Back Home
+        </h1>
+        </Link>
+      <h1 className="text-white flex justify-center font-bold text-5xl py-6">/Art Portfolio</h1>
+      <Link href="/">
+        <h1 className="text-white flex justify-end pr-4 animate-pulse font-bold text-3xl">Ui & UX Portfolio <IoIosArrowForward className="size-10" />
+        </h1>
+        </Link>
+    </motion.div>
+    <div className="pt-4">
       <div className="gallery">
       {/* Render images using the `images` array */}
       {images.map((image, index) => (
         <Image
-        onClick={() => getimg(item.imgSrc)}
           key={index}
           src={image}
-          style={{width:'100%',height:'100%'}}
+          style={{width:'100%',height:'100%',paddingBottom:'12px'}}
           alt={`Portfolio ${index + 1}`}
         />
       ))}
       </div>
-    </div>
+      </div>
+  </>
   );
 };
 
