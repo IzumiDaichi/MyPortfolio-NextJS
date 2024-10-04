@@ -8,7 +8,7 @@ import Contact from "./Contact";
 
 function Home() {
   return (
-    <div className="container h-dvh bg-white overflow-hidden rounded-lg shadow-lg">
+    <div className="container h-dvh bg-white overflow-hidden rounded-lg shadow-lg my-6">
       <div>
         <Banner />
         <Profile />

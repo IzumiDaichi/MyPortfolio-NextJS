@@ -17,8 +17,7 @@ function ArtPortfolios() {
       whileInView={"show"}
       viewport={{ once: false, amount: 0.2 }}
       className="container h-dvh bg-[#E3EAF5] 
-      overflow-hidden rounded-lg shadow-lg hover:cursor-pointer
-      brightness-[.7] hover:brightness-[1]"
+      overflow-hidden rounded-lg shadow-lg hover:cursor-pointer"
     >
      
       <div className="mt-5 px-10 max-w-screen-lg max-h-screen-lg m-auto">

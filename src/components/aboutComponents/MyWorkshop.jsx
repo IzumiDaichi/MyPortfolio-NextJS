@@ -25,19 +25,21 @@ export default function MyWorkshop() {
         viewport={{ once: false, amount: 0.1 }}
         className="grid grid-cols-2 gap-4  "
       >
-        <div className="bg-gray-800 rounded-lg p-4 text-white grid grid-cols-2 items-center">
+        <motion.div 
+        whileHover={{scale:1.1}}
+        className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
           <Image src={Html} width="50" height="50" alt="Icon 1" />
           <p className="hidden sm:block">HTML</p>
-        </div>
-        <div className="bg-gray-800 rounded-lg p-4 text-white grid grid-cols-2 items-center">
+        </motion.div>
+        <div className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
           <Image src={CSS} width="50" height="50" alt="Icon 2" />
           <p className="hidden sm:block">CSS</p>
         </div>
-        <div className="bg-gray-800 rounded-lg p-4 text-white grid grid-cols-2 items-center">
+        <div className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
           <Image src={JS} width="50" height="50" alt="Icon 3" />
           <p className="hidden sm:block">JavaScript</p>
         </div>
-        <div className="bg-gray-800 rounded-lg p-4 text-white grid grid-cols-2 items-center">
+        <div className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
           <Image src={Tailwind} width="50" height="50" alt="Icon 4" />
           <p className="hidden sm:block">Tailwind</p>
         </div>
