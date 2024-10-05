@@ -61,6 +61,20 @@ body {
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 425px) {
+  #aboutimg {
+    visibility: hidden;
+    display: flex;
+    position:absolute;
+  }
+
+  #cardform {
+    display:grid;
+    grid-template-columns: none;
+    grid-template: none;
+  }
+}
+
 /* Gallery */
 @media (max-width: 991px) {
   .gallery {
