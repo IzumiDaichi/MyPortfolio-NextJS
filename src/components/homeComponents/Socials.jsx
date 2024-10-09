@@ -13,15 +13,22 @@ function socials() {
       viewport={{ once: false, amount: 0.2 }}
       className="flex flex-row justify-around pt-10 items-center mb-5"
     >
+      <motion.div
+      whileHover={{scale:1.2}}>
       <Link href="https://www.facebook.com/IzumiDaichi02">
         <AiOutlineFacebook size={60} color="black" className="cursor-pointer" />
       </Link>
+      </motion.div>
+      <motion.div whileHover={{scale:1.2}}>
       <Link href="https://x.com/IzumiDaichi02">
         <AiOutlineX size={60} color="black" className="cursor-pointer" />
       </Link>
+      </motion.div>
+      <motion.div whileHover={{scale:1.2}}>
       <Link href="https://github.com/IzumiDaichi">
         <AiOutlineGithub size={60} color="black" className="cursor-pointer" />
       </Link>
+      </motion.div>
     </motion.div>
   );
 }

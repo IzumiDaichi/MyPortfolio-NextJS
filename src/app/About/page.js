@@ -1,28 +1,26 @@
 "use client";
 
-import ProfileCard from "../components/aboutComponents/ProfileCard";
+import ProfileCard from "../../components/aboutComponents/ProfileCard";
 import React from "react";
 
-import Intro from "../components/aboutComponents/Introduction";
+import Intro from "../../components/aboutComponents/Introduction";
 
-import MyWorkshop from "../components/aboutComponents/MyWorkshop";
+import MyWorkshop from "../../components/aboutComponents/MyWorkshop";
 
-import MyArtStudio from "../components/aboutComponents/MyArtStudio";
+import MyArtStudio from "../../components/aboutComponents/MyArtStudio";
 
-import MyInterests from "../components/aboutComponents/MyInterests";
+import MyInterests from "../../components/aboutComponents/MyInterests";
 
 function About() {
   return (
     <div
-
       id="about"
-      className="container h-fit bg-white rounded-lg shadow-lg flex-col">
-
-
+      className="container h-dvh bg-white rounded-lg shadow-lg flex-col overflow-hidden "
+    >
       <div className="w-screen h-fit bg-[#364971] rounded-lg shadow-lg text-center">
-          <h1 className="text-[#E3EAF5] font-bold text-3xl md:text-5xl my-3">
-            /About Me
-          </h1>
+        <h1 className="text-[#E3EAF5] font-bold text-3xl md:text-5xl my-3">
+          /About Me
+        </h1>
       </div>
 
       <div className="flex flex-col md:flex-row justifiy-between place-items-center lg:justify-center">

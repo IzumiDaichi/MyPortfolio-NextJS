@@ -5,7 +5,6 @@ import ArtPortfolioImg from "/public/Images/ArtPortfolio.png";
 import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import ArtPortfolio from './../../pages/ArtPortfolio';
 
 function ArtPortfolios() {
   return (
@@ -28,7 +27,7 @@ function ArtPortfolios() {
             src={ArtPortfolioImg}
             alt="Art Portfolio"
           />
-          <p className="text-2xl text-black flex-nowrap font-semibold mt-2 hover:text-[#FB923C]">
+          <p className="text-2xl text-black flex-nowrap font-semibold mt-2]">
             MY ART PORTFOLIO
           </p></Link>
           <p className="text-black text-base font-extralight pb-4">

@@ -13,7 +13,7 @@ function ProfileCard() {
       viewport={{ once: false, amount: 0.5 }}
       className="flex flex-row justify-center"
     >
-      <div className="bg-gradient-to-b from-[#E5F9F3] via-[#CCEBF0] to-[#B5D7E8] rounded-lg p-4 shadow-md max-w-screen-xl mx-4">
+      <div className="bg-gradient-to-b from-[#E5F9F3] via-[#CCEBF0] to-[#B5D7E8] rounded-2xl p-8 shadow-md max-w-screen-full">
         <motion.div
           variants={fadeIn("down", 1)}
           initial="hidden"

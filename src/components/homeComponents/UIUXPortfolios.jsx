@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from 'next/link'
 import UIUX from "/public/images/UI & UX.png";
 import Image from "next/image";
 import { fadeIn } from "../../lib/framer";
@@ -17,6 +18,7 @@ function UIUXPortfolios() {
     >
       <div className="mt-5 px-10 max-w-screen-lg max-h-screen-lg m-auto">
         <span className="flex-wrap justify-center">
+          <Link href="ArtPortfolio">
           <div>
           <Image
             className="rounded-lg hover:cursor-pointer"
@@ -27,7 +29,7 @@ function UIUXPortfolios() {
           </div>
           <p className="text-2xl text-black flex-nowrap font-semibold mt-2">
             MY UI & UX Portfolio
-          </p>
+          </p></Link>
           <p className="text-black text-base font-extralight pb-4">
             A Collection of my UI & UX Projects
           </p>

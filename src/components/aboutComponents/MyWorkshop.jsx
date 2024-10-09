@@ -28,21 +28,27 @@ export default function MyWorkshop() {
         <motion.div 
         whileHover={{scale:1.1}}
         className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
-          <Image src={Html} width="50" height="50" alt="Icon 1" />
+          <Image src={Html} width="auto" height="50" alt="Icon 1" />
           <p className="hidden sm:block">HTML</p>
         </motion.div>
-        <div className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
+        <motion.div 
+        whileHover={{scale:1.1}}
+        className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
           <Image src={CSS} width="50" height="50" alt="Icon 2" />
           <p className="hidden sm:block">CSS</p>
-        </div>
-        <div className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
+        </motion.div>
+        <motion.div 
+        whileHover={{scale:1.1}}
+        className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
           <Image src={JS} width="50" height="50" alt="Icon 3" />
           <p className="hidden sm:block">JavaScript</p>
-        </div>
-        <div className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
-          <Image src={Tailwind} width="50" height="50" alt="Icon 4" />
+        </motion.div>
+        <motion.div 
+        whileHover={{scale:1.1}}
+        className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
+          <Image src={Tailwind} width="auto" height="50" alt="Icon 4" />
           <p className="hidden sm:block">Tailwind</p>
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );

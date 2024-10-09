@@ -1,10 +1,9 @@
 import React, {useState} from "react";
 import Image from "next/image";
-import Link from "next/link"
 import '../app/globals.css'
 import { fadeIn } from "../lib/framer";
 import { motion } from "framer-motion";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import Navbar from "@/components/ui/Navbar2";
 
 
 import portfolio1 from "../components/portfolioComponents/portfolio1.webp";
@@ -153,22 +152,17 @@ const getImg = (imgSrc) => {
 }
   return (
   <>
-  
+  <Navbar/>
+  <div className='mt-[89px]'>
     <motion.div
-    className="grid grid-cols-3 items-center bg-[#364971]"
+    className="grid grid-col items-center bg-[#364971]"
     variants={fadeIn("down", 0.2)}
     initial="hidden"
     whileInView={"show"}
     viewport={{ once: true, amount: 0.2 }}>
-      <Link href="/">
-        <h1 className="text-white flex justify-start pl-4 animate-pulse font-bold text-3xl"><IoIosArrowBack className="size-10" />Go Back Home
-        </h1>
-        </Link>
-      <h1 className="text-white flex justify-center font-bold text-5xl py-6">/Art Portfolio</h1>
-      <Link href="/">
-        <h1 className="text-white flex justify-end pr-4 animate-pulse font-bold text-3xl">Ui & UX Portfolio <IoIosArrowForward className="size-10" />
-        </h1>
-        </Link>
+
+      <h1 className="text-white flex justify-self-center font-bold text-5xl py-6">/Art Portfolio</h1>
+
     </motion.div>
     <div className="pt-4">
       <div className="gallery">
@@ -181,6 +175,7 @@ const getImg = (imgSrc) => {
           alt={`Portfolio ${index + 1}`}
         />
       ))}
+      </div>
       </div>
       </div>
   </>

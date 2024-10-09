@@ -11,7 +11,7 @@ function Introduction() {
       viewport={{ once: false, amount: 0.1 }}
       className="leading-7"
     >
-      <p className="text-[#500A06] text-lg text-center mx-14">
+      <p className="text-[#500A06] text-xl text-center mx-8">
         <span className="font-semibold">I'm Jake Rupisan</span>, a BSIT student
         at AMA Computer College. I'm a big fan of digital art and design, and
         you can find some of my work under the pen name Daichi Izumi. Besides

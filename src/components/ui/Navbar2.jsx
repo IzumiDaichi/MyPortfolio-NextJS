@@ -42,22 +42,20 @@ const Navbar = () => {
 
         <div className="flex items-center sm:flex">
           <ul className="hidden sm:flex">
-          <ScrollIntoView selector="#home">
+            <Link href="/">
               <li className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
                 Home
               </li>
-          </ScrollIntoView>
-
-            <ScrollIntoView  alignToTop={true} selector="#about">
-              <li className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
+            </Link>
+            <ScrollIntoView selector="#about">
+              <a href='/#about' className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
                 About
-              </li>
-            </ScrollIntoView>
-
+              </a>
+              </ScrollIntoView>
             <ScrollIntoView selector="#contact">
-              <li className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
+              <a href='/#contact' className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
                 Contact
-              </li>
+              </a>
             </ScrollIntoView>
           </ul>
         </div>
@@ -96,22 +94,21 @@ const Navbar = () => {
                 Home
               </li>
             </Link>
-            
             <ScrollIntoView selector="#about">
-              <li
+              <a href='/#about'
                 onClick={() => setMenuOpen(false)}
                 className="py-4 cursor-pointer text-white hover:bg-[#01A93E] hover:p-4 font-semibold text-2xl"
               >
                 About
-              </li>
+              </a>
             </ScrollIntoView>
             <ScrollIntoView selector="#contact">
-              <li
+              <a href='/#contact'
                 onClick={() => setMenuOpen(false)}
                 className="py-4 cursor-pointer text-white hover:bg-[#01A93E] hover:p-4 font-semibold text-2xl"
               >
                 Contact
-              </li>
+              </a>
             </ScrollIntoView>
           </ul>
         </div>
