@@ -4,6 +4,7 @@ import Banner from "@/components/homeComponents/Banner";
 import Profile from "@/components/homeComponents/Profile";
 import ArtPortfolios from "@/components/homeComponents/ArtPortfolios";
 import UIUXPortfolios from "@/components/homeComponents/UIUXPortfolios";
+import GraphicDesignPortfolios from "@/components/homeComponents/GraphicDesignPortfolios";
 import About from "./../About/page";
 import Contact from "./../Contact/page";
 
@@ -25,6 +26,7 @@ function Home() {
           </h1>
           <ArtPortfolios />
           <UIUXPortfolios />
+          <GraphicDesignPortfolios/>
           <About />
           <Contact />
         </div>

@@ -1,0 +1,43 @@
+"use client";
+import React from "react";
+import Link from 'next/link'
+import GraphicDesign from "/public/images/GraphicDesign.png";
+import Image from "next/image";
+import { fadeIn } from "../../lib/framer";
+import { motion } from "framer-motion";
+
+function GraphicDesignPortfolios() {
+  return (
+    <motion.div
+    whileHover={{scale:1.1}}
+      id="uiux"
+      variants={fadeIn("right", 0.4)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.2 }}
+      className="container h-dvh bg-[#C2E0C7] overflow-hidden rounded-lg shadow-lg"
+    >
+      <div className="mt-5 px-10 max-w-screen-lg max-h-screen-lg m-auto">
+        <span className="flex-wrap justify-center">
+          <Link href="GraphicDesigns">
+          <div>
+          <Image
+            className="rounded-lg hover:cursor-pointer"
+            src={GraphicDesign}
+            alt="UI UX Portfolio"
+            priority
+          />
+          </div>
+          <p className="text-2xl text-black flex-nowrap font-semibold mt-2">
+            MY Graphic Design Portfolio
+          </p></Link>
+          <p className="text-black text-base font-extralight pb-4">
+            A Collection of my Graphic Desgin Projects
+          </p>
+        </span>
+      </div>
+    </motion.div>
+  )
+}
+
+export default GraphicDesignPortfolios
