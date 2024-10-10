@@ -22,10 +22,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-slate-900 block fixed top-0 z-10 w-full shadow-xl">
-      <div className="h-10vh flex justify-between z-50 text-white lg:py-5 pr-20 py-4 w-full">
+    <nav className="bg-slate-900 sticky top-0 z-10 w-full shadow-xl ">
+      <div className="h-10vh flex justify-between z-50 text-white lg:py-5 pr-8 py-4 w-full">
         <Link href="/">
           <Image
+            id='navlogo'
             src={Logo}
             alt="Logo"
             className="object-cover w-full cursor-pointer inline size-12 align-middle mx-4"
@@ -63,7 +64,7 @@ const Navbar = () => {
         </div>
         <div
           onClick={handleNav}
-          className="md:hidden cursor-pointer pl-10 flex items-center"
+          className="sm:hidden cursor-pointer pl-10 flex items-center"
         >
           <AiOutlineMenu size={25} />
         </div>

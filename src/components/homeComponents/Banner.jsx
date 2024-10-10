@@ -8,16 +8,14 @@ const Banner = () => {
   return (
     <ScrollIntoView
     selector="#portfolio">
-    <div className="imagecontainer hover:cursor-pointer relative ">
+    <div id='header' className="imagecontainer hover:cursor-pointer relative ">
       <Image
-        className="bannerimg z-10 w-screen max-h-screen brightness-50 hover:brightness-[.80]"
+        className="z-10 max-w-full max-h-full brightness-[70%] hover:brightness-50"
         src={BannerImg}
         alt="Banner"
         priority
       />
-      <h1 className="imagetext text-6xl text-white hover:text-[#FB923C]">
-        Portfolios
-      </h1>
+     
     </div>
     </ScrollIntoView>
   );

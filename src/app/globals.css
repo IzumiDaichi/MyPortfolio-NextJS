@@ -13,6 +13,14 @@
   font-family: "Lato<3";
   color: aliceblue;
 }
+/* NAVBAR LOGO */
+@media (max-width: 319px) {
+#navlogo {
+  visibility: collapse;
+  display: none;
+}
+}
+
 
 /* Container */
 @media (max-width: 768px) {
@@ -52,13 +60,6 @@ body {
 
 .Button:hover {
   background-color: #01a93e;
-}
-
-.imagetext {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 @media (max-width: 767px) {

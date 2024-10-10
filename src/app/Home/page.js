@@ -13,9 +13,10 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div id='home' className="container h-dvh bg-white overflow-hidden rounded-lg shadow-lg my-6">
+      <Banner />
+      <div id='home' className="container bg-white overflow-hidden rounded-lg shadow-lg my-6">
         <div>
-          <Banner />
+          
           <Profile />
           <hr className="solid my-11 mx-32" />
           <h1

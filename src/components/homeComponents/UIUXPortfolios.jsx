@@ -14,7 +14,7 @@ function UIUXPortfolios() {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.2 }}
-      className="container h-dvh bg-[#C9CEE7] overflow-hidden rounded-lg shadow-lg"
+      className="container h-dvh bg-[#C9CEE7] hover:bg-[#EBF3FF] overflow-hidden rounded-lg shadow-lg"
     >
       <div className="mt-5 px-10 max-w-screen-lg max-h-screen-lg m-auto">
         <span className="flex-wrap justify-center">

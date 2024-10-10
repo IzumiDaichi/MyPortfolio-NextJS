@@ -15,7 +15,7 @@ function GraphicDesignPortfolios() {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.2 }}
-      className="container h-dvh bg-[#C2E0C7] overflow-hidden rounded-lg shadow-lg"
+      className="container h-dvh bg-[#BAE0C0] hover:bg-[#D0F6D6] overflow-hidden rounded-lg shadow-lg"
     >
       <div className="mt-5 px-10 max-w-screen-lg max-h-screen-lg m-auto">
         <span className="flex-wrap justify-center">

@@ -26,6 +26,7 @@ const Navbar = () => {
       <div className="h-10vh flex justify-between z-50 text-white lg:py-5 pr-20 py-4 w-full">
         <Link href="/">
           <Image
+          id='navlogo'
             src={Logo}
             alt="Logo"
             className="object-cover w-full cursor-pointer inline size-12 align-middle mx-4"

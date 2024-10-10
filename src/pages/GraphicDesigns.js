@@ -48,9 +48,17 @@ const GraphicDesigns = () => {
     whileInView={"show"}
     viewport={{ once: true, amount: 0.2 }}>
 
-      <h1 className="text-white flex justify-self-center font-bold text-5xl py-6">/GraphicDesigns/Marketing</h1>
+      <h1 className="text-white flex justify-self-center font-bold text-5xl py-6">/Graphic Design Portfolio</h1>
 
     </motion.div>
+    <motion.div 
+    className="grid grid-col items-center bg-[#253558]"
+    variants={fadeIn("right", 0.2)}
+    initial="hidden"
+    whileInView={"show"}
+    viewport={{ once: true, amount: 0.2 }}>
+      <h2 className="text-white flex justify-self-center font-bold text-2xl py-2">Marketing</h2>
+      </motion.div>
     <div className="pt-4">
       <div className="gallery">
       {/* Render images using the `images` array */}

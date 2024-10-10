@@ -15,7 +15,7 @@ function About() {
   return (
     <div
       id="about"
-      className="container h-dvh bg-white rounded-lg shadow-lg flex-col overflow-hidden "
+      className="container h-dvh bg-white rounded-lg flex-col overflow-hidden "
     >
       <div className="w-screen h-fit bg-[#364971] rounded-lg shadow-lg text-center">
         <h1 className="text-[#E3EAF5] font-bold text-3xl md:text-5xl my-3">
