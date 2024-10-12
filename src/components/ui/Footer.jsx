@@ -7,19 +7,18 @@ import Link from 'next/link'
 
 function Footer() {
   return (
-    <div className="w-full bg-slate-900 h-fit py-4 pl-4 text-white grid grid-cols-3">
+    <div id='footer' className="w-full bg-slate-900 h-fit py-4 px-4 text-white grid grid-cols-2">
 
 <Image
 className='w-64 flex self-center'
  src={Logo2}>
  </Image>
 
-<div></div>
-
  <div>
-<h1 className='font-semibold text-lg text-center'>Get in touch</h1>
-<p className='text-center text-md'>Email: Jakerupisan2016@gmail.com | (+63) 920-812-5475</p>
-<div className='flex-row flex justify-center mt-2'>
+<h1 className='footertext text-end font-semibold text-lg '>Get in touch</h1>
+<p className='footertext text-end text-sm'>JakeRupisan2016@gmail.com</p>
+<p className='footertext text-end text-md'>(+63) 920-812-5475</p>
+<div className='footersocial flex-row flex justify-end mt-2'>
 <Link href="https://www.facebook.com/IzumiDaichi02">
         <AiOutlineFacebook size={40} color="white" className="cursor-pointer" />
       </Link>

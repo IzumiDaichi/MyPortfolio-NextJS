@@ -7,7 +7,7 @@ import Intro from "../../components/aboutComponents/Introduction";
 
 import MyWorkshop from "../../components/aboutComponents/MyWorkshop";
 
-import MyArtStudio from "../../components/aboutComponents/MyArtStudio";
+import MyArtStudio from "../../components/aboutComponents/MyStudio";
 
 import MyInterests from "../../components/aboutComponents/MyInterests";
 

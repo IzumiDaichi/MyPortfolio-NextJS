@@ -27,27 +27,27 @@ export default function MyWorkshop() {
       >
         <motion.div 
         whileHover={{scale:1.1}}
-        className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
-          <Image src={Html} width="auto" height="50" alt="Icon 1" />
-          <p className="hidden sm:block">HTML</p>
+        className="tools bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
+          <Image className="toolsimage" src={Html} width="auto" height="50" alt="Icon 1" />
+          <p className="toolstext">HTML</p>
         </motion.div>
         <motion.div 
         whileHover={{scale:1.1}}
-        className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
-          <Image src={CSS} width="50" height="50" alt="Icon 2" />
-          <p className="hidden sm:block">CSS</p>
+        className="tools bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
+          <Image className="toolsimage" src={CSS} width="50" height="50" alt="Icon 2" />
+          <p className="toolstext">CSS</p>
         </motion.div>
         <motion.div 
         whileHover={{scale:1.1}}
-        className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
-          <Image src={JS} width="50" height="50" alt="Icon 3" />
-          <p className="hidden sm:block">JavaScript</p>
+        className="tools bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
+          <Image className="toolsimage" src={JS} width="50" height="50" alt="Icon 3" />
+          <p className="toolstext">JavaScript</p>
         </motion.div>
         <motion.div 
         whileHover={{scale:1.1}}
-        className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
-          <Image src={Tailwind} width="auto" height="50" alt="Icon 4" />
-          <p className="hidden sm:block">Tailwind</p>
+        className="tools bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center">
+          <Image className="toolsimage" src={Tailwind} width="50" height="50" alt="Icon 4" />
+          <p className="toolstext">Tailwind</p>
         </motion.div>
       </motion.div>
     </div>

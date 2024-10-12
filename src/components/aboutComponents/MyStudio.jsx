@@ -27,31 +27,31 @@ export default function MyArtStudio() {
       >
         <motion.div
           whileHover={{ scale: 1.1 }}
-          className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center"
+          className="tools bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center"
         >
           <Image src={PS} width="50" height="50" alt="Icon 1" />
-          <p className="hidden sm:block">Adobe Photoshop</p>
+          <p className="toolstext">Adobe Photoshop</p>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1 }}
-          className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center"
+          className="tools bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center"
         >
           <Image src={Canva} width="50" height="50" alt="Icon 2" />
-          <p className="hidden sm:block">Canva</p>
+          <p className="toolstext">Canva</p>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1 }}
-          className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center"
+          className="tools bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center"
         >
           <Image src={CSP} width="50" height="50" alt="Icon 3" />
-          <p className="hidden sm:block">ClipStudioPaint</p>
+          <p className="toolstext">ClipStudioPaint</p>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1 }}
-          className="bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center"
+          className="tools bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center"
         >
           <Image src={Figma} width="50" height="50" alt="Icon 4" />
-          <p className="hidden sm:block">Figma</p>
+          <p className="toolstext">Figma</p>
         </motion.div>
       </motion.div>
     </div>

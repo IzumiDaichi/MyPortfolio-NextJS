@@ -18,7 +18,7 @@ function UIUXPortfolios() {
     >
       <div className="mt-5 px-10 max-w-screen-lg max-h-screen-lg m-auto">
         <span className="flex-wrap justify-center">
-          <Link href="ArtPortfolio">
+          <Link href="UIUXDesigns">
           <div>
           <Image
             className="rounded-lg hover:cursor-pointer"

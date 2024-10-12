@@ -23,10 +23,7 @@
 
 
 /* Container */
-@media (max-width: 768px) {
-  .container {
-    width: 100%;
-  }
+@media (max-width: 767px) {
 }
 .container {
   display: flex;
@@ -62,6 +59,7 @@ body {
   background-color: #01a93e;
 }
 
+/* ContactForm & ContactAvatar */
 @media (max-width: 767px) {
   #contactimg {
     visibility: collapse;
@@ -116,4 +114,42 @@ body {
   0% { transform: translate(0,  0px); }
   50%  { transform: translate(0, 15px); }
   100%   { transform: translate(0, -0px); }    
+}
+
+/* TOOLS */
+@media (max-width: 1023px){
+.tools{
+display: grid;
+grid-template-columns: repeat(1, minmax(0, 1fr));
+justify-self: center;
+}
+.toolstext{
+  display: none;
+  text-align: center;
+  padding-top: 4px;
+}
+.toolsimage {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-self: center;
+}
+}
+
+/* Footer */
+@media (max-width: 425px) {
+  #footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center horizontally */
+    justify-content: center;  /* Center vertically */
+    text-align: center;  /* Center text alignment */
+  }
+  .footertext {
+    text-align: center;
+  }
+  .footersocial{
+    display: flex;
+    justify-content: center;
+  }
 }
