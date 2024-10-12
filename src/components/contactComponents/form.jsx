@@ -9,18 +9,33 @@ import {
     CardContent,
   } from "@/components/ui/card";
   import { FaStar } from "react-icons/fa6";
-  import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { RiMailSendFill } from "react-icons/ri";
+
+
+
 
 function form() {
 
     const [state, handleSubmit] = useForm("mrbgzvrb");
   if (state.succeeded) {
-      return <p>MESSAGE SENT</p>;
+      return (
+        <Alert>
+        <RiMailSendFill className="fill-[#0C9C3D] h-4 w-4" />
+        <AlertTitle>SUCCESS!</AlertTitle>
+        <AlertDescription className='text-[#0C9C3D]'>
+          Your Message has been Sent.
+        </AlertDescription>
+      </Alert>
+      );
+      
   }
 
 
   return (
+    <>
+    <div className='flex flex-row justify-center'>
     <Card className="rounded-2xl m-6 pt-2 bg-[#1F2937]">
         <FaStar className="size-10 shadow-none fill-[#FFB955] animate-pulse m-3 flex justify-start" />
 
@@ -37,6 +52,20 @@ function form() {
 <CardContent>
      <form className='flex justify-center flex-col mb-12 mt-3' onSubmit={handleSubmit}>
 
+     <label className='labels pb-2 text-white' htmlFor="name"> Name </label>
+      <input
+        id="name"
+        type="name" 
+        name="name"
+        placeholder="Name"
+        className="rounded-xl text-md mb-4 py-2 pr-18 w-full pl-4"
+        required
+      />
+      <ValidationError 
+        prefix="Name" 
+        field="name"
+        errors={state.errors}/>
+
       <label className='labels pb-2 text-white' htmlFor="email"> Email Address </label>
       <input
         id="email"
@@ -51,6 +80,7 @@ function form() {
         field="email"
         errors={state.errors}
       />
+
 <label className='labels pb-2 text-white' htmlFor="email"> Message </label>
       <textarea
         id="message"
@@ -77,6 +107,9 @@ function form() {
     </form>
     </CardContent>
     </Card>
+    </div>
+
+    </>
   )
 }
 
