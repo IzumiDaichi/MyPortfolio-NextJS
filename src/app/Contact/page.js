@@ -1,7 +1,7 @@
 import React from 'react'
 import ContactForm from '@/components/contactComponents/form'
 import Image from 'next/image'
-import ContactAvatar from "/public/Images/ContactAvatar.png";
+import ContactAvatar from "@/public/Images/ContactAvatar.png";
 
 
 function page() {

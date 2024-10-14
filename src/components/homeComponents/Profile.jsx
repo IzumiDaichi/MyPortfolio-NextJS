@@ -3,9 +3,9 @@ import Image from "next/image";
 import React from "react";
 import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";
-import ProfileImg from "/public/Images/Profile.png";
+import ProfileImg from "@/public/Images/Profile.png";
 import Socials from "../ui/Socials";
-import ProfileAvatar from "/public/Images/profileavatar.png";
+import ProfileAvatar from "@/public/Images/profileavatar.png";
 function Profile() {
   const resumeClick = (e) => {
     e.preventDefault();

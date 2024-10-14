@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import ArtPortfolioImg from "/public/Images/ArtPortfolio.png";
+import ArtPortfolioImg from "@/public/Images/ArtPortfolio.png";
 import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";
 import Link from "next/link";

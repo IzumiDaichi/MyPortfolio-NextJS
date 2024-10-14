@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Logo2 from "/public/logo/Logo2.png";
+import Logo2 from "@/public/logo/Logo2.png";
 import { AiOutlineFacebook, AiOutlineGithub, AiOutlineX } from "react-icons/ai";
 import Link from 'next/link'
 

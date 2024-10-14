@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import Html from "../../../public/icons/Html 5.png";
-import CSS from "../../../public/icons/CSS.png";
-import JS from "../../../public/icons/JavaScript.png";
-import Tailwind from "../../../public/icons/Tailwind.png";
+import Html from "@/public/icons/Html 5.png";
+import CSS from "@/public/icons/CSS.png";
+import JS from "@/public/icons/JavaScript.png";
+import Tailwind from "@/public/icons/Tailwind.png";
 import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";
 

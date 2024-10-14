@@ -1,8 +1,8 @@
 import React from "react";
-import PS from "../../../public/icons/PhotoShop.png";
-import Canva from "../../../public/icons/Canva.png";
-import CSP from "../../../public/icons/CSP.png";
-import Figma from "../../../public/icons/Figma.png";
+import PS from "@/public/icons/PhotoShop.png";
+import Canva from "@/public/icons/Canva.png";
+import CSP from "@/public/icons/CSP.png";
+import Figma from "@/public/icons/Figma.png";
 import Image from "next/image";
 import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import BannerImg from "/public/Images/Banner.png";
+import BannerImg from "@/public/Images/Banner.png";
 import Image from "next/image";
 import ScrollIntoView from 'react-scroll-into-view'
 
