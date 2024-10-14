@@ -11,7 +11,7 @@ function Profile() {
     e.preventDefault();
     // window.open("../../public/resume.pdf", "_blank");
 
-    window.location.href = "/src/public/documents/resume.pdf";
+    window.location.href = "../../public/documents/resume.pdf";
   };
 
   return (
