@@ -15,7 +15,6 @@ import portfolio70 from "@/components/portfolioComponents/portfolio70.png";
 import portfolio71 from "@/components/portfolioComponents/portfolio71.png";
 import portfolio72 from "@/components/portfolioComponents/portfolio72.png";
 import portfolio73 from "@/components/portfolioComponents/portfolio73.png";
-import { portfolio64 } from '@/c';
 
 const GraphicDesigns = () => {
     const images = [
