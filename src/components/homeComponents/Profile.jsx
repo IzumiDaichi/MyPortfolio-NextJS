@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";
-import ProfileImg from "/public/images/Profile.png";
+import ProfileImg from "@/public/images/Profile.png";
 import Socials from "../ui/Socials";
 import ProfileAvatar from "@/public/Images/profileavatar.png";
 function Profile() {
