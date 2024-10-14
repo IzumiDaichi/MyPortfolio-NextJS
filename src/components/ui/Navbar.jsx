@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollIntoView from 'react-scroll-into-view'
 import { useState } from "react";
-import DarkMode from '../../lib/Darkmode'
+import DarkMode from '../../lib/DarkMode.js'
 import {
   AiOutlineClose,
   AiOutlineFacebook,
