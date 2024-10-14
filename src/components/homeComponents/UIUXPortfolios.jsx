@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from 'next/link'
-import UIUX from "/public/images/UI & UX.png";
+import UIUX from "/public/images/UIUX.png";
 import Image from "next/image";
 import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";
