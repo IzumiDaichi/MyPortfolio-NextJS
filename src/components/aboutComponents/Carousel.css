@@ -12,20 +12,6 @@
   width: 0px;
 }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 1rem;
-  background: #E38F52;
-  transition: all 0.5s ease-in-out;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #9F5D3E;
-}
-
-::-webkit-scrollbar-track {
-  background: #16111d;
-}
-
 .swiper_container {
   width: 80%;
   height: 800px;
@@ -127,6 +113,11 @@
 
 .swiper-pagination .swiper-pagination-bullet {
   filter: drop-shadow(0px 8px 24px rgba(60, 83, 144, 0.1));
+}
+
+.dark .swiper-pagination .swiper-pagination-bullet {
+ background-color: white;
+ color: white;
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {

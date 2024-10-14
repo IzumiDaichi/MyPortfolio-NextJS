@@ -1,29 +1,25 @@
 import { useEffect, useState } from 'react';
 
 const DarkMode = () => {
-  const [DarkMode, setIsDarkMode] = useState(false);
+  const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    // Check if dark mode is already set in localStorage
-    const savedMode = localStorage.getItem('dark-mode');
-    if (savedMode === 'true') {
-      document.documentElement.classList.add('dark'); // Apply Tailwind's dark class
-      setIsDarkMode(true);
+    if (typeof window !== 'undefined') { // Ensure window is defined
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const handleChange = () => setDark(mediaQuery.matches);
+
+      // Set initial state based on the current preference
+      setDark(mediaQuery.matches);
+      mediaQuery.addEventListener('change', handleChange);
+
+      // Cleanup function to remove the event listener
+      return () => {
+        mediaQuery.removeEventListener('change', handleChange);
+      };
     }
   }, []);
 
-  const toggleDarkMode = () => {
-    if (DarkMode) {
-      document.documentElement.classList.remove('dark'); // Remove dark class
-      localStorage.setItem('dark-mode', 'false');
-    } else {
-      document.documentElement.classList.add('dark'); // Add dark class
-      localStorage.setItem('dark-mode', 'true');
-    }
-    setIsDarkMode(!DarkMode);
-  };
-
-  return [DarkMode, toggleDarkMode];
+  return [dark];
 };
 
 export default DarkMode;

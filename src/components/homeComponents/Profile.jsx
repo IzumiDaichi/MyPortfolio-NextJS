@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import { React, useEffect } from "react";
 import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";
 import ProfileImg from "@/public/Images/Profile.png";
@@ -56,8 +56,8 @@ function Profile() {
         >
           <Image
             id="profileavatar"
-            src={ProfileAvatar}
-            className="w-full flex justify-self-end dark:"
+            src={ProfileAvatar} // Use the correct image based on dark mode
+            className="w-full flex justify-self-end dark:hidden"
           ></Image>
         </motion.div>
       </div>

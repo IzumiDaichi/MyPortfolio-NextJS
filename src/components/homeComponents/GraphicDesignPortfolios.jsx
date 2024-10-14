@@ -8,22 +8,21 @@ import { motion } from "framer-motion";
 
 function GraphicDesignPortfolios() {
   return (
-    <div className='hover:py-6'>
+    <div>
 
     <Link href="GraphicDesigns">
 
     <motion.div
-    whileHover={{scale:1.1}}
     whileTap={{ scale: 0.95 }}
       id="uiux"
       variants={fadeIn("right", 0.4)}
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.2 }}
-      className="container h-dvh bg-[#E3EAF5] hover:bg-[#F3F8FF] dark:bg-[#364971] dark:hover:bg-[#4A66A0] overflow-hidden rounded-lg shadow-lg"
+      className="container h-dvh bg-[#E3EAF5] hover:bg-[#F3F8FF] dark:bg-[#1B1D25] dark:hover:bg-[#363D5A] overflow-hidden rounded-lg  border dark:border-[#3F5DA7]"
     >
 
-      <div className="mt-5 px-10 max-w-screen-lg max-h-screen-lg m-auto">
+      <div className="mt-5 px-10 max-w-screen-lg max-h-screen-lg m-auto py-8">
           
           <div className='hover:scale-110 transition-transform duration-300'>
           <Image
