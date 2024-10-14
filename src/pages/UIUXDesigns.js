@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import {Card,CardHeader,CardTitle,CardDescription,CardContent,
   } from "@/components/ui/card";
 import Navbar from "@/components/ui/Navbar2";
-import GA69 from '@/public/Images/UI & UX.png'
+import GA69 from '/Images/UI & UX.png'
 import Portfolio from '@/public/Images/UI & UX2.png'
 
 function UIUXDesigns() {

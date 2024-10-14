@@ -1,7 +1,7 @@
 import {React, useState } from "react";
 import Image from "next/image";
-import ProfileImg from "../../../public/Images/Profile.png";
-import ProfileImg2 from "../../../public/images/Profile2.png";
+import ProfileImg from "/Images/Profile.png";
+import ProfileImg2 from "/Images/Profile2.png";
 import Socials from "../ui/Socials2";
 import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";
