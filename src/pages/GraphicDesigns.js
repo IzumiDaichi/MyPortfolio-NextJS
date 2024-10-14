@@ -5,16 +5,17 @@ import { fadeIn } from "../lib/framer";
 import { motion } from "framer-motion";
 import Navbar from "@/components/ui/Navbar2";
 
-import portfolio64 from "../components/portfolioComponents/portfolio64.jpg";
-import portfolio65 from "../components/portfolioComponents/portfolio65.png";
-import portfolio66 from "../components/portfolioComponents/portfolio66.png";
-import portfolio67 from "../components/portfolioComponents/portfolio67.png";
-import portfolio68 from "../components/portfolioComponents/portfolio68.png";
-import portfolio69 from "../components/portfolioComponents/portfolio69.png";
-import portfolio70 from "../components/portfolioComponents/portfolio70.png";
-import portfolio71 from "../components/portfolioComponents/portfolio71.png";
-import portfolio72 from "../components/portfolioComponents/portfolio72.png";
-import portfolio73 from "../components/portfolioComponents/portfolio73.png";
+import portfolio64 from "@/components/portfolioComponents/portfolio64";
+import portfolio65 from "@/components/portfolioComponents/portfolio65.png";
+import portfolio66 from "@/components/portfolioComponents/portfolio66.png";
+import portfolio67 from "@/components/portfolioComponents/portfolio67.png";
+import portfolio68 from "@/components/portfolioComponents/portfolio68.png";
+import portfolio69 from "@/components/portfolioComponents/portfolio69.png";
+import portfolio70 from "@/components/portfolioComponents/portfolio70.png";
+import portfolio71 from "@/components/portfolioComponents/portfolio71.png";
+import portfolio72 from "@/components/portfolioComponents/portfolio72.png";
+import portfolio73 from "@/components/portfolioComponents/portfolio73.png";
+import { portfolio64 } from '@/c';
 
 const GraphicDesigns = () => {
     const images = [
