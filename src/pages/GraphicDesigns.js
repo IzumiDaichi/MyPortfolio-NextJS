@@ -5,7 +5,7 @@ import { fadeIn } from "../lib/framer";
 import { motion } from "framer-motion";
 import Navbar from "@/components/ui/Navbar2";
 
-import portfolio64 from "../components/portfolioComponents/portfolio64.jpg";
+import portfolio64 from "@/components/portfolioComponents/portfolio64.jpg";
 import portfolio65 from "@/components/portfolioComponents/portfolio65.png";
 import portfolio66 from "@/components/portfolioComponents/portfolio66.png";
 import portfolio67 from "@/components/portfolioComponents/portfolio67.png";
