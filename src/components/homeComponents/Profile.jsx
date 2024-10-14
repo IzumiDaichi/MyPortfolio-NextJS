@@ -32,10 +32,10 @@ function Profile() {
           viewport={{ once: false }}
           className=" md:order-1 flex-col pl-2"
         >
-          <h1 className="text-black font-bold text-3xl md:text-5xl mt-0">
+          <h1 className="text-black dark:text-white font-bold text-3xl md:text-5xl mt-0">
             JAKE <br /> RUPISAN
           </h1>
-          <h2 className="text-black font-bold text-xl md:text-xl">
+          <h2 className="text-black dark:text-white font-bold text-xl md:text-xl">
             TRAINING FOR UI & UX, FRONTEND
           </h2>
 
@@ -57,7 +57,7 @@ function Profile() {
           <Image
             id="profileavatar"
             src={ProfileAvatar}
-            className="w-full flex justify-self-end"
+            className="w-full flex justify-self-end dark:"
           ></Image>
         </motion.div>
       </div>

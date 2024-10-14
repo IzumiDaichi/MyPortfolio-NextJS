@@ -2,10 +2,12 @@
 import React from "react";
 import Logo from "/public/logo/Logo.png";
 import Logo2 from "/public/logo/Logo2.png";
+import LogoDRK from "/public/logo/LogoDrk.png";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollIntoView from 'react-scroll-into-view'
 import { useState } from "react";
+import DarkMode from '@/lib/Darkmode'
 import {
   AiOutlineClose,
   AiOutlineFacebook,
@@ -19,19 +21,23 @@ const Navbar = () => {
 
   const handleNav = () => {
     setMenuOpen(!menuOpen);
-  };
+  }
+    const [Dark, toggleDarkMode] = DarkMode();
 
   return (
     <nav className="bg-slate-900 sticky top-0 z-10 w-full shadow-xl ">
       <div className="h-10vh flex justify-between z-50 text-white lg:py-5 pr-8 py-4 w-full">
-        <Link href="/">
+
+        <div onClick={toggleDarkMode}>
           <Image
             id='navlogo'
-            src={Logo}
+            src={Dark ? Logo : LogoDRK}
             alt="Logo"
+            width={50}
+            height={50}
             className="object-cover w-full cursor-pointer inline size-12 align-middle mx-4"
           />
-        </Link>
+        </div>
 
         <div className="flex items-center flex-1 pl-5">
           <Link href="/">

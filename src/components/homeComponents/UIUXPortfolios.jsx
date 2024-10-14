@@ -7,35 +7,41 @@ import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";
 function UIUXPortfolios() {
   return (
+    <div className="hover:py-6">
+
+    <Link href="UIUXDesigns">
     <motion.div
     whileHover={{scale:1.1}}
+    whileTap={{ scale: 0.95 }}
       id="uiux"
       variants={fadeIn("left", 0.4)}
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.2 }}
-      className="container h-dvh bg-[#C9CEE7] hover:bg-[#EBF3FF] overflow-hidden rounded-lg shadow-lg"
+      className="container h-dvh bg-[#E3EAF5] hover:bg-[#F3F8FF] dark:bg-[#364971] dark:hover:bg-[#4A66A0] overflow-hidden rounded-lg shadow-lg"
     >
+
       <div className="mt-5 px-10 max-w-screen-lg max-h-screen-lg m-auto">
-        <span className="flex-wrap justify-center">
-          <Link href="UIUXDesigns">
-          <div>
+
+          <div className="hover:scale-110 transition-transform duration-300">
           <Image
             className="rounded-lg hover:cursor-pointer"
             src={UIUX}
-            alt="UI UX Portfolio"
-            priority
-          />
+            alt="UI UX Portfolio"/>
           </div>
-          <p className="text-2xl text-black flex-nowrap font-semibold mt-2">
+
+          <div className='pt-6'>
+          <p className="text-2xl text-black dark:text-white flex-nowrap font-semibold mt-2">
             MY UI & UX Portfolio
-          </p></Link>
-          <p className="text-black text-base font-extralight pb-4">
+          </p>
+          <p className="text-black dark:text-white text-base font-extralight pb-4">
             A Collection of my UI & UX Projects
           </p>
-        </span>
+          </div>
+
       </div>
-    </motion.div>
+    </motion.div></Link>
+    </div>
   );
 }
 

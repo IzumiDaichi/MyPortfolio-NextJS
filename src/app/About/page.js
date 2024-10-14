@@ -15,9 +15,9 @@ function About() {
   return (
     <div
       id="about"
-      className="container h-dvh bg-white rounded-lg flex-col overflow-hidden "
+      className="container h-dvh bg-white dark:bg-[#1B1D25] rounded-lg flex-col overflow-hidden "
     >
-      <div className="w-screen h-fit bg-[#364971] rounded-lg shadow-lg text-center">
+      <div className="w-screen h-fit bg-[#364971] dark:bg-[#3F5DA7] rounded-lg shadow-lg text-center">
         <h1 className="text-[#E3EAF5] font-bold text-3xl md:text-5xl my-3">
           /About Me
         </h1>
@@ -34,7 +34,7 @@ function About() {
       </div>
 
       <div className="my-4 justify-center">
-        <h1 className="font-bold text-3xl ml-8">My Interests</h1>
+        <h1 className="font-bold text-3xl ml-8 dark:text-white">My Interests</h1>
         <MyInterests />
       </div>
 

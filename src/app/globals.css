@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  @apply transition-colors duration-200;
+}
+
 /* Custom FONT */
 @font-face {
   font-family: "Lato";
@@ -40,6 +44,10 @@ body {
   background: #30283b;
 }
 
+.dark body {
+  background: #201E35;
+}
+
 .active {
   color: #01a93e;
 }
@@ -48,9 +56,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e38f52;
+  background-color: #FB923C;
   color: white;
-  padding: 1rem;
   border: none;
   cursor: pointer;
 }

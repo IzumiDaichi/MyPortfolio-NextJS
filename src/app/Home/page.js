@@ -14,14 +14,14 @@ function Home() {
     <>
       <Navbar />
       <Banner />
-      <div id='home' className="container bg-white overflow-hidden rounded-lg shadow-lg my-6">
+      <div id='home' className="container bg-white dark:bg-[#1B1D25] overflow-hidden rounded-lg shadow-lg my-6">
         <div>
           
           <Profile />
-          <hr className="solid my-11 mx-32" />
+          <hr className="solid my-11 mx-32 dark:border-[#3F5DA7] dark:shadow-indigo-500/100 dark:shadow" />
           <h1
             id="portfolio"
-            className="text-black font-bold text-3xl md:text-5xl justify-center flex flex-row"
+            className="text-black dark:text-white font-bold text-3xl md:text-5xl justify-center flex flex-row"
           >
             Portfolios
           </h1>

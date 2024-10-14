@@ -17,19 +17,19 @@ function socials() {
       whileHover={{scale:1.2}}
       whileTap={{ rotate: 190, scale: 1.2 }}>
       <Link href="https://www.facebook.com/IzumiDaichi02">
-        <AiOutlineFacebook size={60} color="black" className="cursor-pointer dark:fill-[#3C7DBF]" />
+        <AiOutlineFacebook size={60} color="black" className="cursor-pointer dark:fill-white" />
       </Link>
       </motion.div>
       <motion.div whileHover={{scale:1.2}}
       whileTap={{ rotate: 190, scale: 1.2 }}>
       <Link href="https://x.com/IzumiDaichi02">
-        <AiOutlineX size={60} color="black" className="cursor-pointer dark:fill-[#3C7DBF]" />
+        <AiOutlineX size={60} color="black" className="cursor-pointer dark:fill-white" />
       </Link>
       </motion.div>
       <motion.div whileHover={{scale:1.2}}
       whileTap={{ rotate: 190, scale: 1.2 }}>
       <Link href="https://github.com/IzumiDaichi">
-        <AiOutlineGithub size={60} color="black" className="cursor-pointer dark:fill-[#3C7DBF]" />
+        <AiOutlineGithub size={60} color="black" className="cursor-pointer dark:fill-white" />
       </Link>
       </motion.div>
     </motion.div>

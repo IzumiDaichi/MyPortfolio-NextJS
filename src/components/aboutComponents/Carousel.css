@@ -9,7 +9,7 @@
 
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -27,7 +27,7 @@
 }
 
 .swiper_container {
-  width: 75%;
+  width: 80%;
   height: 800px;
   padding: 2rem 0;
   position: relative;

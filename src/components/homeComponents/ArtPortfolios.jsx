@@ -8,7 +8,12 @@ import Link from "next/link";
 
 function ArtPortfolios() {
   return (
+    <div className='hover:py-6'>
+
+    <Link href="ArtPortfolio">
+
     <motion.div
+    whileTap={{ scale: 0.95 }}
     whileHover={{scale:1.1}}
       id="art"
       variants={fadeIn("right", 0.8)}
@@ -16,26 +21,32 @@ function ArtPortfolios() {
       whileInView={"show"}
       viewport={{ once: false, amount: 0.2 }}
       className="container h-dvh bg-[#E3EAF5] 
-      overflow-hidden rounded-lg shadow-lg hover:cursor-pointer hover:bg-[#F3F8FF]"
+      overflow-hidden rounded-lg shadow-inner hover:cursor-pointer hover:bg-[#F3F8FF] dark:bg-[#364971] dark:hover:bg-[#4A66A0] "
     >
      
-      <div className="mt-5 px-10 max-w-screen-lg max-h-screen-lg m-auto">
-        <span className="flex-wrap justify-center">
-           <Link href="ArtPortfolio">
+      <div className="mt-5 px-10 max-w-screen-lg max-h-screen-lg m-auto py-8">
+
+           <div className='hover:scale-110 transition-transform duration-300'>
            <Image
-            className="rounded-lg"
+            className="rounded-lg image"
             src={ArtPortfolioImg}
             alt="Art Portfolio"
           />
-          <p className="text-2xl text-black flex-nowrap font-semibold mt-2]">
+          </div>
+
+          <div className='pt-6'>
+          <p className="text-2xl text-black dark:text-white flex-nowrap font-semibold]">
             MY ART PORTFOLIO
-          </p></Link>
-          <p className="text-black text-base font-extralight pb-4">
+          </p>
+          <p className="text-black dark:text-white text-base font-extralight">
             A Collection of my artworks
           </p>
-        </span>
+        </div>
+
       </div>
     </motion.div>
+    </Link>
+    </div>
   );
 }
 

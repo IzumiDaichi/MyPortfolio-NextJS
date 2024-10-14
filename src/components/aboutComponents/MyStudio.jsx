@@ -16,7 +16,7 @@ export default function MyArtStudio() {
         whileInView={"show"}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <h1 className="font-bold text-3xl pb-4"> My Studio </h1>
+        <h1 className="font-bold text-3xl pb-4 dark:text-white"> My Studio </h1>
       </motion.div>
       <motion.div
         variants={fadeIn("down", 0.8)}
@@ -27,28 +27,28 @@ export default function MyArtStudio() {
       >
         <motion.div
           whileHover={{ scale: 1.1 }}
-          className="tools bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center"
+          className="tools bg-gray-800 dark:bg-[#364971] rounded-2xl p-4 text-white grid grid-cols-2 items-center"
         >
           <Image src={PS} width="50" height="50" alt="Icon 1" />
           <p className="toolstext">Adobe Photoshop</p>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1 }}
-          className="tools bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center"
+          className="tools bg-gray-800 dark:bg-[#364971] rounded-2xl p-4 text-white grid grid-cols-2 items-center"
         >
           <Image src={Canva} width="50" height="50" alt="Icon 2" />
           <p className="toolstext">Canva</p>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1 }}
-          className="tools bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center"
+          className="tools bg-gray-800 dark:bg-[#364971] rounded-2xl p-4 text-white grid grid-cols-2 items-center"
         >
           <Image src={CSP} width="50" height="50" alt="Icon 3" />
           <p className="toolstext">ClipStudioPaint</p>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1 }}
-          className="tools bg-gray-800 rounded-2xl p-4 text-white grid grid-cols-2 items-center"
+          className="tools bg-gray-800 dark:bg-[#364971] rounded-2xl p-4 text-white grid grid-cols-2 items-center"
         >
           <Image src={Figma} width="50" height="50" alt="Icon 4" />
           <p className="toolstext">Figma</p>
