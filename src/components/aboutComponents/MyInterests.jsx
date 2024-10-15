@@ -9,16 +9,16 @@ import "swiper/css/navigation";
 import "./Carousel.css";
 import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";
-import slide_image_1 from "@/public/Images/SliderImg.webp";
-import slide_image_2 from "@/public/Images/SliderImg2.webp";
-import slide_image_3 from "@/public/Images/SliderImg3.webp";
-import slide_image_4 from "@/public/Images/SliderImg4.webp";
-import slide_image_5 from "@/public/Images/SliderImg5.webp";
-import slide_image_6 from "@/public/Images/SliderImg6.webp";
-import slide_image_7 from "@/public/Images/SliderImg7.webp";
-import slide_image_8 from "@/public/Images/SliderImg8.webp";
-import slide_image_9 from "@/public/Images/SliderImg9.webp";
-import slide_image_10 from "@/public/Images/SliderImg10.webp";
+import slide_image_1 from "@/Images/SliderImg.webp";
+import slide_image_2 from "@/Images/SliderImg2.webp";
+import slide_image_3 from "@/Images/SliderImg3.webp";
+import slide_image_4 from "@/Images/SliderImg4.webp";
+import slide_image_5 from "@/Images/SliderImg5.webp";
+import slide_image_6 from "@/Images/SliderImg6.webp";
+import slide_image_7 from "@/Images/SliderImg7.webp";
+import slide_image_8 from "@/Images/SliderImg8.webp";
+import slide_image_9 from "@/Images/SliderImg9.webp";
+import slide_image_10 from "@/Images/SliderImg10.webp";
 
 import {
   EffectCoverflow,

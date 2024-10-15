@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from 'next/link'
-import GraphicDesign from "@/public/Images/GraphicDesign.png";
+import GraphicDesign from "@/Images/GraphicDesign.png";
 import Image from "next/image";
 import { fadeIn } from "../../lib/framer";
 import { motion } from "framer-motion";

@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import Logo from "@/public/logo/Logo.png";
-import Logo2 from "@/public/logo/Logo2.png";
-import LogoDRK from "@/public/logo/LogoDrk.png";
+import Logo from "@/logo/Logo.png";
+import Logo2 from "@/logo/Logo2.png";
+import LogoDRK from "@/logo/LogoDrk.png";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollIntoView from "react-scroll-into-view";
