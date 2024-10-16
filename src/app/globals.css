@@ -60,6 +60,7 @@ body {
   color: white;
   border: none;
   cursor: pointer;
+  width: fit-content;
 }
 
 .Button:hover {
@@ -67,7 +68,7 @@ body {
 }
 
 /* ContactForm & ContactAvatar */
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   #contactimg {
     visibility: collapse;
     display: none;
@@ -87,6 +88,12 @@ body {
   #profileavatar {
     visibility: collapse;
     display: none;
+  }
+
+  #profiletext {
+    display: flex;
+    text-align: center;
+    align-items: center;
   }
 }
 
@@ -141,6 +148,18 @@ justify-self: center;
   justify-content: center;
   align-self: center;
 }
+}
+
+@media (max-width: 375px) {
+
+#apps{
+  flex-direction: column;
+}
+
+.toolscontainer{
+  grid-template-columns: repeat(4, minmax(0, 1fr));  
+  }
+
 }
 
 /* Footer */

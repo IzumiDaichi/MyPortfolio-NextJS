@@ -2,13 +2,7 @@
 
 import ProfileCard from "../../components/aboutComponents/ProfileCard";
 import React from "react";
-
 import Intro from "../../components/aboutComponents/Introduction";
-
-import MyWorkshop from "../../components/aboutComponents/MyWorkshop";
-
-import MyArtStudio from "../../components/aboutComponents/MyStudio";
-
 import MyInterests from "../../components/aboutComponents/MyInterests";
 
 function About() {
@@ -19,7 +13,7 @@ function About() {
     >
       <div className="w-screen h-fit bg-[#364971] dark:bg-[#3F5DA7] rounded-lg shadow-lg text-center">
         <h1 className="text-[#E3EAF5] font-bold text-3xl md:text-5xl my-3">
-          /About Me
+          About Me
         </h1>
       </div>
 
@@ -36,16 +30,6 @@ function About() {
       <div className="my-4 justify-center">
         <h1 className="font-bold text-3xl ml-8 dark:text-white">My Interests</h1>
         <MyInterests />
-      </div>
-
-      <div className="mt-4 justify-between md:flex">
-        <div className="px-5 pb-5">
-          <MyWorkshop />
-        </div>
-
-        <div className="px-5 pb-5">
-          <MyArtStudio />
-        </div>
       </div>
     </div>
   );

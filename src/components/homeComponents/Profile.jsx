@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import ProfileImg from "@/Images/Profile.png";
 import Socials from "../ui/Socials";
 import ProfileAvatar from "@/Images/profileavatar.png";
+import MyWorkshop from "../../components/homeComponents/MyWorkshop";
+import MyArtStudio from "../../components/homeComponents/MyStudio";
 function Profile() {
   const resumeClick = (e) => {
     e.preventDefault();
@@ -25,7 +27,9 @@ function Profile() {
           />
           <Socials />
         </div>
+
         <motion.div
+        id="profiletext"
           variants={fadeIn("right")}
           initial="hidden"
           whileInView={"show"}
@@ -46,6 +50,7 @@ function Profile() {
           >
             Download Resume
           </motion.button>
+
         </motion.div>
         <motion.div
           variants={fadeIn("down")}
@@ -60,6 +65,16 @@ function Profile() {
             className="w-full flex justify-self-end dark:hidden"
           ></Image>
         </motion.div>
+      </div>
+
+      <div id='apps' className="mt-4 justify-center w-full flex">
+        <div className="px-5 pb-5">
+          <MyWorkshop />
+        </div>
+
+        <div className="px-5 pb-5">
+          <MyArtStudio />
+        </div>
       </div>
     </>
   );
