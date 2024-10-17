@@ -10,7 +10,7 @@ const Banner = () => {
     selector="#portfolio">
     <div id='header' className="imagecontainer hover:cursor-pointer relative ">
       <Image
-        className="z-10 max-w-full max-h-full brightness-[70%] hover:brightness-50"
+        className="z-10 max-w-full max-h-full brightness-50 hover:brightness-[70%]"
         src={BannerImg}
         alt="Banner"
         priority

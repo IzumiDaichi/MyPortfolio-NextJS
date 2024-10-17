@@ -66,7 +66,7 @@ function Profile() {
         >
           <Image onClick={toggleDarkMode}
             id="profileavatar"
-            src={Dark ? ProfileAvatar : DRKProfileAvatar} // Use the correct image based on dark mode
+            src={Dark ? DRKProfileAvatar : ProfileAvatar} // Use the correct image based on dark mode
             className="w-full flex justify-self-end hover:cursor-pointer"
           ></Image>
         </motion.div>

@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from 'react';
 import Navbar from "@/components/ui/Navbar";
 import Banner from "@/components/homeComponents/Banner";
 import Profile from "@/components/homeComponents/Profile";
@@ -7,9 +8,27 @@ import UIUXPortfolios from "@/components/homeComponents/UIUXPortfolios";
 import GraphicDesignPortfolios from "@/components/homeComponents/GraphicDesignPortfolios";
 import About from "./../About/page";
 import Contact from "./../Contact/page";
+import Preloader from '../../lib/Preloader';
 
 
-function Home() {
+
+const Home = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      // Simulate data fetching
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      setLoading(false);
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <Preloader />;
+  }
+  
   return (
     <>
       <Navbar />
