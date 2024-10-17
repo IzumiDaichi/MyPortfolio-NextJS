@@ -29,13 +29,6 @@ const GraphicDesigns = () => {
       portfolio72,
       portfolio73,
     ];
-  const [model, setModel] = useState(false);
-  const [tempimgSrc, setTempImgSrc] = useState ('');
-  
-  const getImg = (imgSrc) => {
-    setTempImgSrc(imgSrc);
-    setModel(true);
-  }
 
   return (
      <>

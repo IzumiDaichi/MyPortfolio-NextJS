@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from "next/image";
 import '../app/globals.css'
-import { fadeIn } from "../lib/framer";
 import { motion } from "framer-motion";
 import {Card,CardHeader,CardTitle,CardDescription,CardContent,
   } from "@/components/ui/card";

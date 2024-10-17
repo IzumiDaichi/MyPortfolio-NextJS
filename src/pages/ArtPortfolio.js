@@ -77,6 +77,7 @@ import portfolio63 from "../components/portfolioComponents/portfolio62.webp";
 
 
 const ArtPortfolio = () => {
+  
   const images = [
     portfolio1,
     portfolio2,
@@ -143,13 +144,7 @@ const ArtPortfolio = () => {
     portfolio63,
 
   ];
-const [model, setModel] = useState(false);
-const [tempimgSrc, setTempImgSrc] = useState ('');
 
-const getImg = (imgSrc) => {
-  setTempImgSrc(imgSrc);
-  setModel(true);
-}
   return (
   <>
   <Navbar/>

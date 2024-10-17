@@ -31,7 +31,7 @@ function UIUXPortfolios() {
 
           <div className='pt-6'>
           <p className="text-2xl text-black dark:text-white flex-nowrap font-semibold mt-2">
-            MY UI & UX Portfolio
+            MY UI & UX PORTFOLIO
           </p>
           <p className="text-black dark:text-white text-base font-extralight pb-4">
             A Collection of my UI & UX Projects

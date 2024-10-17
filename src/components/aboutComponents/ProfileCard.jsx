@@ -62,9 +62,9 @@ const ProfileCard = () => {
         />
         
         {/* Text content that changes with the image */}
-        <h2 className="text-xl font-semibold text-black">{profile.name}</h2>
-        <p className="text-black mb-2">{profile.role}</p>
-        <p className="text-black mb-4">{profile.description}</p>
+        <h2 className="text-xl font-bold text-black">{profile.name}</h2>
+        <p className="text-black font-medium">{profile.role}</p>
+        <p className="text-black font-medium">{profile.description}</p>
 
         <div className="flex space-x-4">
           <Socials />

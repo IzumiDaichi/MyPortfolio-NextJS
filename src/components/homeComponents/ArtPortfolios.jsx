@@ -34,7 +34,7 @@ function ArtPortfolios() {
           </div>
 
           <div className='pt-6'>
-          <p className="text-2xl text-black dark:text-white flex-nowrap font-semibold]">
+          <p className="text-2xl text-black dark:text-white flex-nowrap font-semibold">
             MY ART PORTFOLIO
           </p>
           <p className="text-black dark:text-white text-base font-extralight">

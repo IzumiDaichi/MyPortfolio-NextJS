@@ -6,8 +6,11 @@ import { motion } from "framer-motion";
 import ProfileImg from "@/Images/Profile.png";
 import Socials from "../ui/Socials";
 import ProfileAvatar from "@/Images/profileavatar.png";
-import MyWorkshop from "../../components/homeComponents/MyWorkshop";
+import DRKProfileAvatar from '@/Images/darkprofileavatar.png'
+import MyWorkshop from './MyWorkshop'
+import MyTools from "./MyTools";
 import MyArtStudio from "../../components/homeComponents/MyStudio";
+import DarkMode from "@/lib/DarkModeToggle";
 function Profile() {
   const resumeClick = (e) => {
     e.preventDefault();
@@ -15,6 +18,8 @@ function Profile() {
 
     window.location.href = "./documents/resume.pdf";
   };
+
+  const [Dark, toggleDarkMode] = DarkMode();
 
   return (
     <>
@@ -59,23 +64,18 @@ function Profile() {
           viewport={{ once: false }}
           className="flex order-1 "
         >
-          <Image
+          <Image onClick={toggleDarkMode}
             id="profileavatar"
-            src={ProfileAvatar} // Use the correct image based on dark mode
-            className="w-full flex justify-self-end dark:hidden"
+            src={Dark ? ProfileAvatar : DRKProfileAvatar} // Use the correct image based on dark mode
+            className="w-full flex justify-self-end hover:cursor-pointer"
           ></Image>
         </motion.div>
       </div>
 
-      <div id='apps' className="mt-4 justify-center w-full flex">
-        <div className="px-5 pb-5">
-          <MyWorkshop />
-        </div>
-
-        <div className="px-5 pb-5">
-          <MyArtStudio />
-        </div>
-      </div>
+      <div className="apps mt-4 justify-center w-full flex">
+        <MyWorkshop/>
+      </div> 
+      
     </>
   );
 }
