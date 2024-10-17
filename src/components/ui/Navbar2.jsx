@@ -96,20 +96,24 @@ const Navbar = () => {
               </li>
             </Link>
             <ScrollIntoView selector="#about">
+              <li className="py-4">
               <a href='/#about'
                 onClick={() => setMenuOpen(false)}
                 className="py-4 cursor-pointer text-white hover:bg-[#01A93E] hover:p-4 font-semibold text-2xl"
               >
                 About
               </a>
+              </li>
             </ScrollIntoView>
             <ScrollIntoView selector="#contact">
+              <li className="py-4">
               <a href='/#contact'
                 onClick={() => setMenuOpen(false)}
                 className="py-4 cursor-pointer text-white hover:bg-[#01A93E] hover:p-4 font-semibold text-2xl"
               >
                 Contact
               </a>
+              </li>
             </ScrollIntoView>
           </ul>
         </div>
