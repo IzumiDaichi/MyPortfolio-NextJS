@@ -8,6 +8,7 @@ import Link from "next/link";
 import ScrollIntoView from "react-scroll-into-view";
 import { useState } from "react";
 import DarkMode from "../../lib/DarkModeToggle.js";
+import { useDarkMode } from "@/lib/DarkModeContext.js";
 import {
   AiOutlineClose,
   AiOutlineFacebook,
@@ -22,7 +23,7 @@ const Navbar = () => {
   const handleNav = () => {
     setMenuOpen(!menuOpen);
   };
-  const [Dark, toggleDarkMode] = DarkMode();
+  const {isDarkMode, toggleDarkMode} = useDarkMode();
 
   return (
     <nav className="bg-slate-900 sticky top-0 z-10 w-full shadow-xl ">
@@ -30,7 +31,7 @@ const Navbar = () => {
         <div onClick={toggleDarkMode}>
           <Image
             id="navlogo"
-            src={Dark ? Logo : LogoDRK}
+            src={isDarkMode ? Logo : LogoDRK}
             alt="Logo"
             width={50}
             height={50}

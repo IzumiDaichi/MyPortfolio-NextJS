@@ -11,6 +11,7 @@ import MyWorkshop from './MyWorkshop'
 import MyTools from "./MyTools";
 import MyArtStudio from "../../components/homeComponents/MyStudio";
 import DarkMode from "@/lib/DarkModeToggle";
+import { useDarkMode } from "@/lib/DarkModeContext.js";
 function Profile() {
   const resumeClick = (e) => {
     e.preventDefault();
@@ -19,7 +20,7 @@ function Profile() {
     window.location.href = "./documents/resume.pdf";
   };
 
-  const [Dark, toggleDarkMode] = DarkMode();
+  const {isDarkMode, toggleDarkMode} = useDarkMode();
 
   return (
     <>
@@ -66,7 +67,7 @@ function Profile() {
         >
           <Image onClick={toggleDarkMode}
             id="profileavatar"
-            src={Dark ? DRKProfileAvatar : ProfileAvatar} // Use the correct image based on dark mode
+            src={isDarkMode ? DRKProfileAvatar : ProfileAvatar} // Use the correct image based on dark mode
             className="w-full flex justify-self-end hover:cursor-pointer"
           ></Image>
         </motion.div>
