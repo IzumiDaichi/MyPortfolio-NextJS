@@ -8,9 +8,6 @@ import Socials from "../ui/Socials";
 import ProfileAvatar from "@/Images/profileavatar.png";
 import DRKProfileAvatar from '@/Images/darkprofileavatar.png'
 import MyWorkshop from './MyWorkshop'
-import MyTools from "./MyTools";
-import MyArtStudio from "../../components/homeComponents/MyStudio";
-import DarkMode from "@/lib/DarkModeToggle";
 import { useDarkMode } from "@/lib/DarkModeContext.js";
 function Profile() {
   const resumeClick = (e) => {

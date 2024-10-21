@@ -1,13 +1,10 @@
-"use client";
 import React from "react";
 import Logo from "@/logo/Logo.png";
 import Logo2 from "@/logo/Logo2.png";
 import LogoDRK from "@/logo/LogoDrk.png";
 import Image from "next/image";
 import Link from "next/link";
-import ScrollIntoView from "react-scroll-into-view";
 import { useState } from "react";
-import DarkMode from "../../lib/DarkModeToggle.js";
 import { useDarkMode } from "@/lib/DarkModeContext.js";
 import {
   AiOutlineClose,
@@ -17,13 +14,28 @@ import {
   AiOutlineX,
 } from "react-icons/ai";
 
+// Function to handle scroll with offset
+const scrollToSection = (id) => {
+  const element = document.querySelector(id);
+  if (element) {
+    const navbarHeight = document.querySelector("nav").offsetHeight;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - navbarHeight;
+
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+};
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleNav = () => {
     setMenuOpen(!menuOpen);
   };
-  const {isDarkMode, toggleDarkMode} = useDarkMode();
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
     <nav className="bg-slate-900 sticky top-0 z-10 w-full shadow-xl ">
@@ -49,25 +61,29 @@ const Navbar = () => {
 
         <div className="flex items-center sm:flex">
           <ul className="hidden sm:flex">
-            <ScrollIntoView selector="#home">
-              <li className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
-                Home
-              </li>
-            </ScrollIntoView>
+            <li
+              className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white"
+              onClick={() => scrollToSection("#home")}
+            >
+              Home
+            </li>
 
-            <ScrollIntoView alignToTop={true} selector="#about">
-              <li className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
-                About
-              </li>
-            </ScrollIntoView>
+            <li
+              className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white"
+              onClick={() => scrollToSection("#about")}
+            >
+              About
+            </li>
 
-            <ScrollIntoView selector="#contact">
-              <li className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white">
-                Contact
-              </li>
-            </ScrollIntoView>
+            <li
+              className="ml-10 text-xl font-normal hover:text-[#E38F52] transition border-b-2 border-slate-900 hover:border-orange-500 cursor-pointer text-white"
+              onClick={() => scrollToSection("#contact")}
+            >
+              Contact
+            </li>
           </ul>
         </div>
+
         <div
           onClick={handleNav}
           className="sm:hidden cursor-pointer pl-10 flex items-center"
@@ -104,24 +120,28 @@ const Navbar = () => {
               </li>
             </Link>
 
-            <ScrollIntoView selector="#about">
-              <li
-                onClick={() => setMenuOpen(false)}
-                className="py-4 cursor-pointer text-white hover:bg-[#01A93E] hover:p-4 font-semibold text-2xl"
-              >
-                About
-              </li>
-            </ScrollIntoView>
-            <ScrollIntoView selector="#contact">
-              <li
-                onClick={() => setMenuOpen(false)}
-                className="py-4 cursor-pointer text-white hover:bg-[#01A93E] hover:p-4 font-semibold text-2xl"
-              >
-                Contact
-              </li>
-            </ScrollIntoView>
+            <li
+              onClick={() => {
+                scrollToSection("#about");
+                setMenuOpen(false);
+              }}
+              className="py-4 cursor-pointer text-white hover:bg-[#01A93E] hover:p-4 font-semibold text-2xl"
+            >
+              About
+            </li>
+
+            <li
+              onClick={() => {
+                scrollToSection("#contact");
+                setMenuOpen(false);
+              }}
+              className="py-4 cursor-pointer text-white hover:bg-[#01A93E] hover:p-4 font-semibold text-2xl"
+            >
+              Contact
+            </li>
           </ul>
         </div>
+
         <div className="flex flex-row justify-around pt-10 items-center">
           <Link href="https://www.facebook.com/IzumiDaichi02">
             <AiOutlineFacebook

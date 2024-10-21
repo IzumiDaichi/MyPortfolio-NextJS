@@ -9,10 +9,14 @@ function Footer() {
   return (
     <div id='footer' className="w-full bg-slate-900 h-fit py-4 px-4 text-white grid grid-cols-2">
 
+  <div className='w-fit'>
+<Link href='/'>
 <Image
 className='w-64 flex self-center'
  src={Logo2}>
  </Image>
+</Link>
+</div>
 
  <div>
 <h1 className='footertext text-end font-semibold text-lg '>Get in touch</h1>
