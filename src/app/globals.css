@@ -221,6 +221,20 @@ display:none
   
 }
 
+@media (max-width: 425px) {
+
+  #successform {
+    display:flex;
+    flex-direction: column;
+    width:auto;
+  }
+
+  #MformContainer {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
 /* Footer */
 @media (max-width: 425px) {
   #footer {
