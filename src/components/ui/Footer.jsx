@@ -13,7 +13,8 @@ function Footer() {
 <Link href='/'>
 <Image
 className='w-64 flex self-center'
- src={Logo2}>
+ src={Logo2}
+ alt='Logo'>
  </Image>
 </Link>
 </div>

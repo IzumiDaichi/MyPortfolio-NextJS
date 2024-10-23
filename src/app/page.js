@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from './Home/page'
+import Home from '@/pages/Home/page'
 import Footer from '@/components/ui/Footer'
 export default function page() {
   return (

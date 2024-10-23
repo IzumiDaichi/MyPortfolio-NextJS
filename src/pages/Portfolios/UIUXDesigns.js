@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image";
-import '../app/globals.css'
+import "../../app/globals.css";
 import { motion } from "framer-motion";
 import Link from 'next/link';
 import {Card,CardHeader,CardTitle,CardDescription,CardContent,
@@ -27,7 +27,7 @@ function UIUXDesigns() {
                         </div>
                         </CardHeader>
                         <CardContent className='pt-2'>
-                            <Image className='rounded-2xl' src={GA69}></Image>
+                            <Image className='rounded-2xl' src={GA69} alt='GA69 KOREAN MERCHANDISE'></Image>
                         </CardContent>
                     <CardDescription className='mx-4 font-medium text-lg text-center mb-4'>Figma Design of GA69 Korean Merchandise used for Capstone Thesis</CardDescription>
                 </Card>
@@ -44,7 +44,7 @@ function UIUXDesigns() {
                         </div>
                         </CardHeader>
                         <CardContent className='pt-2'>
-                            <Image className='rounded-2xl' src={Portfolio}></Image>
+                            <Image className='rounded-2xl' src={Portfolio} alt='PORTFOLIO'></Image>
                         </CardContent>
                     <CardDescription className='mx-4 font-medium text-lg text-center mb-4'>Figma Design of this portfolio used to base the design of this website from scratch</CardDescription>
                 </Card>

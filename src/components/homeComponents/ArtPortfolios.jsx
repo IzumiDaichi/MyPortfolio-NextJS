@@ -10,7 +10,7 @@ function ArtPortfolios() {
   return (
     <div>
 
-    <Link href="ArtPortfolio">
+    <Link href="Portfolios/ArtPortfolio">
 
     <motion.div
     whileTap={{ scale: 0.95 }}

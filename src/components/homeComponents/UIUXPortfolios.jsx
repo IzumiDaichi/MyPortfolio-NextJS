@@ -9,7 +9,7 @@ function UIUXPortfolios() {
   return (
     <div>
 
-    <Link href="UIUXDesigns">
+    <Link href="Portfolios/UIUXDesigns">
     <motion.div
     whileTap={{ scale: 0.95 }}
       id="uiux"
