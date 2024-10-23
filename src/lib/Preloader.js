@@ -7,7 +7,7 @@ import Image from 'next/image';
 const Preloader = () => {
   return (
     <div className="preloader">
-      <Image layout='fill' src={Loading} alt="Loading..." />
+      <Image property='unoptimized' src={Loading} alt="Loading..." />
     </div>
   );
 };

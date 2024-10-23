@@ -1,5 +1,6 @@
+"use client"
 import React from 'react';
-import { useForm, ValidationError } from '@formspree/react'; 
+import { useForm, ValidationError } from '@formspree/react'; // Import Formspree hook and error handler
 import {
   Card,
   CardHeader,
@@ -13,15 +14,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { RiMailSendFill } from "react-icons/ri";
 
 function FormComponent() {
-  const [state, handleSubmit] = useForm("mrbgzvrb"); // Replace with your Formspree ID
-  const [showError, setShowError] = React.useState(false);
-
-  React.useEffect(() => {
-    // Check if there are errors and set showError state accordingly
-    if (state.errors && state.errors.length > 0) {
-      setShowError(true);
-    }
-  }, [state.errors]);
+  const [state, handleSubmit] = useForm("mrbgzvrb"); // Replace with your form ID
 
   if (state.succeeded) {
     return (
@@ -124,7 +117,7 @@ function FormComponent() {
                 <button
                   type="submit"
                   className="Button px-8 p-3 rounded-xl hover:cursor-pointer hover:bg-[#0C9C3D] hover:shadow-lg hover:shadow-[#006A43] font-medium text-white"
-                  disabled={state.submitting}
+                  disabled={state.submitting} // Disable while submitting
                 >
                   {state.submitting ? "Submitting..." : "Submit"}
                 </button>
@@ -133,28 +126,6 @@ function FormComponent() {
           </CardContent>
         </Card>
       </div>
-
-      {/* Error Pop-up Modal */}
-      {showError && (
-        <motion.div
-          className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          <div className="bg-white rounded-xl p-6 shadow-xl w-80 text-center">
-            <AlertTitle className="text-xl font-bold text-red-600">Submission Failed!</AlertTitle>
-            <AlertDescription className="text-gray-700 mt-4">
-              There was an error submitting your message. Please try again later.
-            </AlertDescription>
-            <button
-              className="mt-6 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700"
-              onClick={() => setShowError(false)} // Close the modal
-            >
-              Close
-            </button>
-          </div>
-        </motion.div>
-      )}
     </>
   );
 }
