@@ -43,7 +43,7 @@ function Profile() {
             JAKE <br /> RUPISAN
           </h1>
           <h2 className="text-black dark:text-white font-bold text-xl md:text-xl">
-            TRAINING FOR UI & UX, FRONTEND
+            TRAINING FOR WEB DEVELOPMENT
           </h2>
 
           <motion.button
