@@ -31,7 +31,7 @@ const ArtPortfolio = () => {
               variants={scaleVariant} // Apply the scale variant
               initial="hidden"
               whileInView="show"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: false, amount: 0.4 }}
               className="mb-6"
             >
               <Image

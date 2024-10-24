@@ -23,15 +23,16 @@ className='w-64 flex self-center'
 <h1 className='footertext text-end font-semibold text-lg '>Get in touch</h1>
 <p className='footertext text-end text-sm'>JakeRupisan2016@gmail.com</p>
 <p className='footertext text-end text-md'>(+63) 920-812-5475</p>
+
 <div className='footersocial flex-row flex justify-end mt-2'>
 <Link href="https://www.facebook.com/IzumiDaichi02">
-        <AiOutlineFacebook size={40} color="white" className="cursor-pointer" />
+        <AiOutlineFacebook size={40} className="text-white hover:text-[#0C9C3D] cursor-pointer" />
       </Link>
       <Link href="https://x.com/IzumiDaichi02">
-        <AiOutlineX size={40} color="white" className="cursor-pointer" />
+        <AiOutlineX size={40} className="text-white hover:text-[#0C9C3D] cursor-pointer"/>
       </Link> 
       <Link href="https://github.com/IzumiDaichi">
-        <AiOutlineGithub size={40} color="white" className="cursor-pointer" />
+        <AiOutlineGithub size={40} className="text-white hover:text-[#0C9C3D] cursor-pointer" />
       </Link>
       </div>
   </div>
