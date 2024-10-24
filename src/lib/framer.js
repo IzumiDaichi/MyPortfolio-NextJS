@@ -15,7 +15,36 @@ export const fadeIn = (direction, delay) => {
             type: 'tween',
             duration: 0.6,
             ease: [0, 0.25, 0.25, 0.75],
+            
         }
     }
 }
 }
+
+export const scaleVariant = {
+    hidden: { opacity: 0, scale: 0.5 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  export const FlipVariant = {
+    hidden: { 
+      opacity: 0,
+      rotateY: 90, // Initial state: flipped and invisible
+    },
+    show: {
+      opacity: 1,
+      rotateY: 0, // Final state: fully visible and unflipped
+      transition: {
+        duration: 0.8,
+        ease: "easeInOut",
+      },
+    },
+  };
+  

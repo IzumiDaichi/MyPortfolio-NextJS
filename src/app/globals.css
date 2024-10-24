@@ -235,6 +235,16 @@ display:none
   }
 }
 
+@keyframes glowtxt {
+  0% { text-shadow: 0 0 1px #ffffff00, 0 0 10px #ffb955, 0 0 15px #ffb955; }
+  50% { text-shadow: 0 0 10px #ffffff00, 0 0 20px #ffb955, 0 0 30px #ffb955; }
+  100% { text-shadow: 0 0 5px #ffffff00, 0 0 10px #ffb955, 0 0 15px #ffb955; }
+}
+
+.dark .glow {
+  animation: glowtxt 3s infinite;
+}
+
 /* Footer */
 @media (max-width: 425px) {
   #footer {
