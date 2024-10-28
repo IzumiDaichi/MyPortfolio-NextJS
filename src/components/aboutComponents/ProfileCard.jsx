@@ -15,7 +15,7 @@ const ProfileCard = () => {
     description: "Student",
   });
 
-  const [bgColor, setBgColor] = useState("bg-gradient-to-b from-[#E5F9F3] via-[#CCEBF0] to-[#B5D7E8] dark:bg-gradient-to-b dark:from-[rgb(19,132,98)] dark:via-[#2B8998] dark:to-[#184860] "); // Default background color
+  const [bgColor, setBgColor] = useState("bg-gradient-to-b from-[#E5F9F3] via-[#CCEBF0] to-[#B5D7E8] dark:bg-gradient-to-b dark:from-[#138462] dark:via-[#2B8998] dark:to-[#184860] "); // Default background color
 
   // Define alternative profile content and background color
   const alternativeProfile = {
@@ -25,7 +25,7 @@ const ProfileCard = () => {
     description: "Novice Artist",
   };
 
-  const alternativeBgColor = "bg-gradient-to-b from-[#A2E5E1] via-[#99D3D6] to-[#7AB2C6] dark:bg-gradient-to-b dark:from-[rgb(13, 92, 70)] dark:via-[#1F6B7A] dark:to-[#0F3B48]"; // New background color for the alternative profile
+  const alternativeBgColor = "bg-gradient-to-b from-[#A2E5E1] via-[#99D3D6] to-[#7AB2C6] dark:bg-gradient-to-b dark:from-[#0d5c46] dark:via-[#1F6B7A] dark:to-[#0F3B48]"; // New background color for the alternative profile
 
   // Handle image click to toggle content and background color
   const handleProfileClick = () => {
@@ -39,7 +39,7 @@ const ProfileCard = () => {
         role: "TRAINING FOR WEB DEVELOPMENT",
         description: "Student",
       });
-      setBgColor("bg-gradient-to-b from-[#E5F9F3] via-[#CCEBF0] to-[#B5D7E8] dark:bg-gradient-to-b dark:from-[rgb(19,132,98)] dark:via-[#2B8998] dark:to-[#184860] "); // Reset to default color
+      setBgColor("bg-gradient-to-b from-[#E5F9F3] via-[#CCEBF0] to-[#B5D7E8] dark:bg-gradient-to-b dark:from-[#138462] dark:via-[#2B8998] dark:to-[#184860] "); // Reset to default color
     }
   };
 

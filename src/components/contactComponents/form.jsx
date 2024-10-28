@@ -116,7 +116,7 @@ function FormComponent() {
               <motion.div whileHover={{ scale: 1.1 }} className="flex place-self-end">
                 <button
                   type="submit"
-                  className="Button px-8 p-3 rounded-xl hover:cursor-pointer hover:bg-[#0C9C3D] hover:shadow-lg hover:shadow-[#006A43] font-medium text-white"
+                  className="Button px-8 p-3 rounded-xl hover:cursor-pointer hover:shadow-lg hover:shadow-[#006A43] font-medium text-white"
                   disabled={state.submitting} // Disable while submitting
                 >
                   {state.submitting ? "Submitting..." : "Submit"}
