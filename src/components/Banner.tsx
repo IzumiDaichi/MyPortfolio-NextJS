@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { BsChevronDown } from "react-icons/bs";
 
 export default function Banner() {
   const [height, setHeight] = useState("100vh");
@@ -20,7 +21,8 @@ export default function Banner() {
 
   return (
     <div
-      className="relative w-full banner-image"
+      id="home"
+      className="relative w-full"
       style={{ height }}
     >
       <Image
@@ -29,7 +31,13 @@ export default function Banner() {
         fill
         style={{ objectFit: "cover" }}
         priority
+        className="banner-image"
       />
+
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
+      <BsChevronDown className="size-10" />
+      </div>
+
     </div>
   );
 }
