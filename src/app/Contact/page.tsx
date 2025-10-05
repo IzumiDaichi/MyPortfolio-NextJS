@@ -1,9 +1,43 @@
-import React from 'react'
+"use client";
+
+import React from "react";
+import CopyText from "@/components/ui/CopyText";
+import Image from "next/image";
 
 export default function Contact() {
+  const handleMail = () => {
+    window.location.href =
+      "mailto:Jakerupisan2016@gmail.com";
+  };
+
   return (
-    <div id='contact' className="container">
-        <h1 className="mr-auto sm:pt-2 text-2xl md:text-3xl">Contact</h1>
+    <div id="contact" className="container mb-[32px]">
+      <h1 className="pl-4 pb-2 sm:pt-2 text-2xl md:text-3xl">Contact</h1>
+
+      <div className="flex flex-col text-center items-center">
+        <h3 className="pt-4 text-2xl uppercase font-semibold">Mail</h3>
+        <p className="pb-4">The easiest way to contact me is through Email</p>
+
+        <Image src="/Mail.png" alt="Email" width={250} height={250} />
+
+        <div className="pt-2 flex flex-col items-center gap-1">
+          <div className="flex items-center gap-2">
+            <span>Email me at:</span>
+            <CopyText
+              text="Jakerupisan2016@gmail.com"
+              hoverText="Copy to clipboard"
+            />
+          </div>
+
+          <p>or press the button below to open your mail app</p>
+
+          <button
+            onClick={handleMail}
+            className="button px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition duration-200">
+            Send me an email!
+          </button>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
