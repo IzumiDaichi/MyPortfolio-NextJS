@@ -1,9 +1,10 @@
 import Card from "@/components/ui/Card"
 export default function Projects() {
   return (
-    <section id="projects" className="container mb-8 flex-auto">
+  <div className="section pb-8 pt-4">
+    <div id="projects" className="container flex-auto">
       {/* Section Title */}
-      <h1 className="sm:pt-2 text-2xl md:text-3xl font-bold">Projects</h1>
+      <h1>Projects</h1>
 
       <Card
         category="Development"
@@ -22,6 +23,7 @@ export default function Projects() {
           "Adobe Photoshop",
         ]}
         link="https://jakesoldportfolio.vercel.app/"></Card>
-    </section>
+    </div>
+    </div>
   );
 }

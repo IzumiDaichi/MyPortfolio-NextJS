@@ -1,54 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #EDEDED;
+  --background: #ffffff;
   --foreground: #333333;
-  --banner-brightness: 100%;
-}
-
-html {
   scroll-behavior: smooth;
+  --font-weight: 500;
+  --banner-brightness: 100%;
 }
 
 .dark{
     --background: #1E1E1E;
-    --foreground: #EDEDED;
-    --banner-brightness: 70%;
-}
-
-.NavigationBar {
-  background-color: rgba(0, 0, 0, 0.3);
-  color:#ededed;
-}
-
-.dark .NavigationBar {
-  background-color: #1e2939;
-}
-
-.Navigation {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.Navigation:hover {
-  color:white;
-}
-
-.dark .Navigation {
-  font-weight: 700;
-  color: #ededed;
-  text-transform: uppercase;
-}
-
-.dark .Navigation:hover {
-  color: #FFAF22;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-poppins);
-  transition: background-color 0.3s ease, color 0.3s ease;
+    --foreground: white;
+    --banner-brightness: 60%;
 }
 
 .container {
@@ -73,18 +36,34 @@ body {
   }
 }
 
-h1, h2 {
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-poppins);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.NavigationBar {
+  background-color: rgba(0,0,0,0.7);
+  color:white;
+}
+.dark .NavigationBar {
+  background-color: #1e2939;
+}
+.NavigationBar .Navigation:hover {
+  color: #fcb900;
+}
+
+.Navigation {
   font-weight: 700;
-  font-style: italic;
   text-transform: uppercase;
 }
-
-hr {
-  color: #131314;
+.Navigation:hover {
+  color: white;
+  cursor: pointer;
 }
-
-.dark hr {
-  color: #EDEDED;
+.dark .Navigation:hover {
+  color: #fcb900;
 }
 
 #banner-image {
@@ -92,78 +71,74 @@ hr {
   transition: filter 0.4s ease;
 }
 
-.divider {
-  border: none;
-  border-bottom: 1px solid #333333;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+h1 {
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 36px;
+  text-align: left;
+  line-height: 1em;
 }
 
-.inverteddivider {
-  border-color:#EDEDED;
+h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align: left;
+  line-height: 1em;
 }
 
-.dark .inverteddivider {
-  border-color: #444444;
+h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1em;
 }
-
-.dark .divider {
-  border-color: #EDEDED;
+.dark h1,h2,h3 {
+  color: var(--foreground)
 }
 
 .tags {
   display: inline-block;
   padding: 0.4rem 1rem;
-  background-color: #EDEDED;
+  background-color: #fff;
   color: #333333;
   font-size: 14px;
   font-weight: 500;
-  border: 1px solid #ccc;
+  border: 1px solid #CCCCCC;
   border-radius: 6px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
-
 .tags:hover {
-  background-color: #e3e3e3;
-  border-color: #ccc;
-  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.15);
+  background-color: #f1f1f1;
   transform: translateY(-3px)
 }
-
 .dark .tags{
   color: #EDEDED;
   background-color: #2E2E2E;
 }
-
 .dark .tags:hover{
   background-color: #1E3A5F;
 }
 
-.hover:hover{
-  transition: transform 0.2s ease-in-out;
-  transform: translateY(-5px)
-}
-
 .card {
-  padding-top: 4px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
-  background-color: #6F9BBF;
-  color: #EDEDED;
-  border-radius: 6px;
-}
-
-.dark .card {
-  background-color: #2A2A2A;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: var(--background);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .button {
   display: inline-block;
   padding: 0.4rem 1rem;
-  color: #131314;
-  background-color: #EDEDED;
+  color: #fff;
+  background-color: #393b77;
   font-size: 14px;
   font-weight: 500;
   border: 1px solid #ccc;
@@ -172,17 +147,19 @@ hr {
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   cursor: pointer;
 }
-
 .button:hover{
   transform: scale(1.08);
-  background-color: #e3e3e3;
+  background-color: #fcb900;
+  color: #fff;
 }
-
 .dark .button {
-  background-color: #2e2e2e;
-  color: #EDEDED;
+  background-color: #2E2E2E;
+  color: #fff;
 }
 
-.dark .button:hover {
-  background-color: #1E3A5F;
+.section {
+  background-color: #f4f5f7;
+}
+.dark .section {
+  background-color: #1a1a1a;
 }

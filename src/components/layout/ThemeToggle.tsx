@@ -26,7 +26,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="w-14 h-8 flex items-center rounded-full p-1 bg-gray-700 relative transition-colors duration-300"
+      className="w-14 h-8 flex items-center rounded-full p-1 bg-gray-700 relative transition-colors duration-300 cursor-pointer"
       aria-label="Toggle theme"
     >
       {/* Sliding circle */}

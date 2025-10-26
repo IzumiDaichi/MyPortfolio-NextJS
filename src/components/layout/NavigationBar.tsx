@@ -47,7 +47,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-colors duration-500 ${
-        scrolled ? "NavigationBar" : "bg-transparent"
+        scrolled ? "NavigationBar " : "bg-transparent"
       }`}
     >
       <div className="container">
@@ -80,17 +80,17 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className="relative w-8 h-8 flex flex-col justify-center items-center focus:outline-none"
             >
-              <span
+              <a
                 className={`block w-6 h-[2px] bg-white rounded-sm transition-transform duration-300 ${
                   isOpen ? "rotate-45 translate-y-[6px]" : ""
                 }`}
               />
-              <span
+              <a
                 className={`block w-6 h-[2px] bg-white rounded-sm my-[5px] transition-opacity duration-200 ${
                   isOpen ? "opacity-0" : "opacity-100"
                 }`}
               />
-              <span
+              <a
                 className={`block w-6 h-[2px] bg-white rounded-sm transition-transform duration-300 ${
                   isOpen ? "-rotate-45 -translate-y-[6px]" : ""
                 }`}
@@ -104,13 +104,13 @@ export default function Navbar() {
       {isOpen && (
         <div className="fixed top-0 left-0 w-full h-screen md:hidden bg-black/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center space-y-6">
           {sections.map((section) => (
-            <button
+            <a
               key={section}
               onClick={() => handleScrollToSection(section)}
-              className="Navigation text-[#ededed] text-2xl"
+              className="Navigation"
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
-            </button>
+            </a>
           ))}
           <ThemeToggle />
         </div>

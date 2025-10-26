@@ -20,9 +20,9 @@ export default function Card({
   tags,
 }: CardProps) {
   return (
-    <div className="card mt-4">
+    <div className="card font-medium mt-4">
       {/* Category */}
-      <h2 className="text-2xl font-semibold mb-2">{category}</h2>
+      <h2 className="mb-2">{category}</h2>
 
       {/* Content Wrapper */}
       <div className="flex flex-col lg:flex-row gap-6">
@@ -41,13 +41,13 @@ export default function Card({
         {/* Text Content */}
         <div className="flex flex-1 flex-col">
           {/* Title */}
-          <h3 className="font-bold uppercase text-xl mb-2">{title}</h3>
+          <h3 className="mb-2">{title}</h3>
 
           {/* Description */}
           <div className="space-y-2">
             <p>{description}</p>
 
-            <hr className="inverteddivider" />
+            <hr/>
 
             {/* Tags */}
             <p className="font-medium">Created using:</p>

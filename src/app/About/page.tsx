@@ -4,22 +4,25 @@ import Tags from "@/components/ui/Tag";
 
 export default function About() {
   return (
-    <div id="about" className="mb-[32px] mt-[64px] container flex flex-col lg:flex-row">
-      <div className="flex justify-center ">
+    <div id="about" className="container mb-[32px] mt-[32px]">
+        <h1 className=""> About Me </h1>
+
+
+        <div className=" flex flex-col lg:flex-row lg:gap-6 mt-4">
+          <div className="flex justify-center">
         <Image
           src="/Profile.webp"
           alt="Profile"
           width={450}
           height={450}
-          className="rounded-md lg:max-w-[500px] object-cover w-auto h-auto"
+          className="rounded-md lg:max-w-[500px] object-cover"
         />
-      </div>
+        </div>
 
-      <div className="flex-auto flex-col lg:ml-6">
-        <h1 className="mr-auto pt-2 lg:pt-0  text-2xl md:text-3xl">
-          About Me
-        </h1>
-        <span className="text-center">
+<div className="flex flex-col text-center space-y-2">
+
+        {/* About me */}
+        <div className="flex flex-col">
           <p className="text-[#EB9730] font-bold text-2xl">Jake Rupisan</p>
           <p>Junior Front-End Developer</p>
           <p>
@@ -33,11 +36,13 @@ export default function About() {
               Techstacks
             </a>
           </p>
-        </span>
-        <hr className="divider" />
-        <h1 className="mr-auto pb-2 text-xl md:text-2xl">
-          What tools do i use?
-        </h1>
+          </div>
+          
+        <hr />
+
+        <h2 className=""> What tools do i use? </h2>
+        {/* Tags */}
+        <div>
         <Tags
           tags={[
             "HTML",
@@ -55,7 +60,9 @@ export default function About() {
             "Clip Studio Paint EX",
           ]}
         />
+        </div>
+        </div>
       </div>
-    </div>
+      </div>
   );
 }

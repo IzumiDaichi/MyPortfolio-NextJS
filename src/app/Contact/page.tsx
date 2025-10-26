@@ -11,11 +11,10 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact" className="container mb-[32px]">
-      <h1 className="pl-4 pb-2 sm:pt-2 text-2xl md:text-3xl">Contact</h1>
+    <div id="contact" className="container mb-[32px] mt-4">
+      <h1 className="">Contact</h1>
 
       <div className="flex flex-col text-center items-center">
-        <h3 className="pt-4 text-2xl uppercase font-semibold">Mail</h3>
         <p className="pb-4">The easiest way to contact me is through Email</p>
 
         <Image src="/Mail.png" alt="Email" width={250} height={250} />
@@ -33,7 +32,7 @@ export default function Contact() {
 
           <button
             onClick={handleMail}
-            className="button px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition duration-200">
+            className="button">
             Send me an email!
           </button>
         </div>
