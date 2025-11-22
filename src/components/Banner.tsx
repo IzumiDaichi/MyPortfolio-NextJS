@@ -20,7 +20,7 @@ export default function Banner() {
       />
 
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
-        <BsChevronDown className="size-10" />
+        <BsChevronDown className="size-10" aria-hidden="true"/>
       </div>
     </div>
   );

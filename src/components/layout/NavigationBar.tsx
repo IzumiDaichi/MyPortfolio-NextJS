@@ -78,6 +78,7 @@ export default function Navbar() {
           <div className="md:hidden z-[60] relative">
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
               className="relative w-8 h-8 flex flex-col justify-center items-center focus:outline-none"
             >
               <a

@@ -12,20 +12,20 @@ export default function Footer() {
         href="https://www.facebook.com/IzumiDaichi02"
         target="_blank"
         rel="noopener noreferrer">
-        <FaFacebookSquare className="hover" size={50} />
+        <FaFacebookSquare className="hover"  aria-label="Facebook" size={50} />
         </Link>
 
         <Link
         href="https://x.com/IzumiDaichi02"
         target="_blank"
         rel="noopener noreferrer">
-        <FaSquareXTwitter className="hover" size={50} />
+        <FaSquareXTwitter className="hover"  aria-label="Twitter / X" size={50} />
         </Link>
 
         <Link href="https://github.com/IzumiDaichi"
         target="_blank"
         rel="noopener noreferrer">
-        <FaSquareGithub className="hover" size={50} />
+        <FaSquareGithub className="hover"  aria-label="Github" size={50} />
         </Link>
       </div>
       <p>© 2025 Jake Rupisan</p>
