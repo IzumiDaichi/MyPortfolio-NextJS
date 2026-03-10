@@ -1,4 +1,5 @@
 import Card from "@/components/ui/Card"
+
 export default function Projects() {
   return (
   <div className="section pb-8 pt-4">

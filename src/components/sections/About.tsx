@@ -37,7 +37,7 @@ export default function About() {
             </a>
           </p>
           </div>
-          
+
         <hr />
 
         <h2 className=""> What tools do i use? </h2>

@@ -1,8 +1,8 @@
 import React from 'react'
-import Banner from '@/components/Banner'
-import About from './About/page'
-import Projects from './Projects/page'
-import Contact from './Contact/page'
+import Banner from '@/components/ui/Banner'
+import About from '@/components/sections/About'
+import Projects from '@/components/sections/Projects'
+import Contact from '@/components/sections/Contact'
 
 export default function Home() {
   return (
