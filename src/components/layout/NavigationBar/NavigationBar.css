@@ -1,0 +1,22 @@
+.NavigationBar {
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+}
+.dark .NavigationBar {
+  background-color: #1e2939;
+}
+.NavigationBar .Navigation:hover {
+  color: #fcb900;
+}
+
+.Navigation {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.Navigation:hover {
+  color: white;
+  cursor: pointer;
+}
+.dark .Navigation:hover {
+  color: #fcb900;
+}

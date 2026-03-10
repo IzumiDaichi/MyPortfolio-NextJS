@@ -25,7 +25,7 @@ export default function CopyText({ text, hoverText = "Copy to Clipboard" }: Copy
     >
       <p
         onClick={handleCopy}
-        className="cursor-pointer underline underline-offset-2 text-[#EB9730] hover:text-[#FFAF22] hover:decoration-[#FFAF22] decoration-[#EB9730] decoration-[2px] select-none transition duration-200"
+        className="hyperlink text-[#EB9730] hover:text-[#ffa538]"
       >
         {copied ? text : text}
       </p>

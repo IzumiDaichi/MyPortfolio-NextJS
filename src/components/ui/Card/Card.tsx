@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import Tags from "@/components/ui/Tag"
+import Tags from "@/components/ui/Tag/Tag";
+import styles from "./Card.module.css";
 
 interface CardProps {
   category: string;
@@ -20,7 +21,7 @@ export default function Card({
   tags,
 }: CardProps) {
   return (
-    <div className="card font-medium mt-4">
+    <div className={`${styles.card} font-medium mt-4`}>
       {/* Category */}
       <h2 className="mb-2">{category}</h2>
 

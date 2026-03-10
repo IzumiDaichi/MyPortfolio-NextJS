@@ -1,24 +1,30 @@
 @import "tailwindcss";
 
+/* Variables */
+
 :root {
   --background: #ffffff;
   --foreground: #333333;
-  scroll-behavior: smooth;
   --font-weight: 500;
   --banner-brightness: 100%;
+  --transition-fast: 0.15s ease;
+  --transition-slow: 0.3s ease;
+  scroll-behavior: smooth;
 }
 
-.dark{
-    --background: #1E1E1E;
-    --foreground: white;
-    --banner-brightness: 60%;
+.dark {
+  --background: #1e1e1e;
+  --foreground: white;
+  --banner-brightness: 60%;
 }
+
+/* Layout helpers */
 
 .container {
   max-width: 80rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem; 
+  padding-left: 1rem;
   padding-right: 1rem;
 }
 
@@ -36,39 +42,13 @@
   }
 }
 
+/* Base elements */
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-poppins);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.NavigationBar {
-  background-color: rgba(0,0,0,0.7);
-  color:white;
-}
-.dark .NavigationBar {
-  background-color: #1e2939;
-}
-.NavigationBar .Navigation:hover {
-  color: #fcb900;
-}
-
-.Navigation {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.Navigation:hover {
-  color: white;
-  cursor: pointer;
-}
-.dark .Navigation:hover {
-  color: #fcb900;
-}
-
-#banner-image {
-  filter: brightness(var(--banner-brightness));
-  transition: filter 0.4s ease;
+  transition: background-color var(--transition-slow), color var(--transition-slow);
 }
 
 h1 {
@@ -95,44 +75,8 @@ h3 {
   text-align: left;
   line-height: 1em;
 }
-.dark h1,h2,h3 {
-  color: var(--foreground)
-}
 
-.tags {
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  background-color: #fff;
-  color: #333333;
-  font-size: 14px;
-  font-weight: 500;
-  border: 1px solid #CCCCCC;
-  border-radius: 6px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-}
-.tags:hover {
-  background-color: #f1f1f1;
-  transform: translateY(-3px)
-}
-.dark .tags{
-  color: #EDEDED;
-  background-color: #2E2E2E;
-}
-.dark .tags:hover{
-  background-color: #1E3A5F;
-}
-
-.card {
-  padding-top: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  background-color: var(--background);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
+/* Reusable components */
 
 .button {
   display: inline-block;
@@ -144,22 +88,56 @@ h3 {
   border: 1px solid #ccc;
   border-radius: 6px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  transition: transform var(--transition-slow), box-shadow var(--transition-fast), background-color var(--transition-fast);
   cursor: pointer;
 }
-.button:hover{
+
+.button:hover {
   transform: scale(1.08);
-  background-color: #fcb900;
+  background-color: #425aa7;
   color: #fff;
 }
+
 .dark .button {
-  background-color: #2E2E2E;
+  background-color: #393b77;
+  color: #fff;
+  border: 1px solid rgb(65, 49, 156)
+}
+
+.dark .button:hover {
+  background-color: #425aa7;
   color: #fff;
 }
 
 .section {
   background-color: #f4f5f7;
 }
+
 .dark .section {
   background-color: #1a1a1a;
+}
+
+.hover-icon {
+  transition: transform var(--transition-fast), color var(--transition-fast);
+  cursor: pointer;
+}
+
+.hover-icon:hover {
+  transform: scale(1.15);
+  color: #393b77;
+}
+
+.dark .hover-icon:hover{
+  color: #425aa7;
+}
+
+.hyperlink {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  user-select: none;
+  transition: var(--transition-fast);
 }

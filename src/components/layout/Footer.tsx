@@ -9,23 +9,23 @@ export default function Footer() {
     <div className="container flex flex-col items-center">
       <div className="flex flex-row">
         <Link 
-        href="https://www.facebook.com/IzumiDaichi02"
+        href="https://www.facebook.com/jake.rupisan/"
         target="_blank"
         rel="noopener noreferrer">
-        <FaFacebookSquare className="hover"  aria-label="Facebook" size={50} />
+        <FaFacebookSquare className="hover-icon"  aria-label="Facebook" size={50} />
         </Link>
 
         <Link
         href="https://x.com/IzumiDaichi02"
         target="_blank"
         rel="noopener noreferrer">
-        <FaSquareXTwitter className="hover"  aria-label="Twitter / X" size={50} />
+        <FaSquareXTwitter className="hover-icon"  aria-label="Twitter / X" size={50} />
         </Link>
 
         <Link href="https://github.com/IzumiDaichi"
         target="_blank"
         rel="noopener noreferrer">
-        <FaSquareGithub className="hover"  aria-label="Github" size={50} />
+        <FaSquareGithub className="hover-icon"  aria-label="Github" size={50} />
         </Link>
       </div>
       <p>© 2025 Jake Rupisan</p>

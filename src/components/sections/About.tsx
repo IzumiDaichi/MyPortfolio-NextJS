@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Tags from "@/components/ui/Tag";
+import Tags from "@/components/ui/Tag/Tag";
 
 export default function About() {
   return (

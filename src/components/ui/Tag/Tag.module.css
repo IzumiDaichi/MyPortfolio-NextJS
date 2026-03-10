@@ -1,0 +1,24 @@
+.tags {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background-color: #fff;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #CCCCCC;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: transform var(--transition-slow), box-shadow var(--transition-slow), background-color var(--transition-slow);
+  cursor: pointer;
+}
+.tags:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-3px)
+}
+:global(.dark) .tags{
+  color: #EDEDED;
+  background-color:var(--background);
+}
+:global(.dark) .tags:hover{
+  background-color: #333333;
+}
