@@ -5,15 +5,11 @@ export function useScrollEffect(navbarOffset: number) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const homeSection = document.getElementById("home");
-      if (homeSection) {
-        const homeBottom = homeSection.offsetTop + homeSection.offsetHeight;
-        setScrolled(window.scrollY > homeBottom - navbarOffset);
-      }
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [navbarOffset]);
+  }, []);
 
   return scrolled;
 }

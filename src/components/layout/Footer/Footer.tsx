@@ -3,11 +3,12 @@ import Link from "next/link";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <div className="container flex flex-col items-center">
-      <div className="flex flex-row">
+    <div className= {styles.footer} >
+      <div className={styles.footer_icon_container} >
         <Link 
         href="https://www.facebook.com/jake.rupisan/"
         target="_blank"

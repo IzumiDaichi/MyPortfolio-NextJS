@@ -17,8 +17,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-colors duration-500 ${
-        scrolled ? "NavigationBar " : "bg-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-500 ${
+        scrolled || isOpen ? "NavigationBar shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container">

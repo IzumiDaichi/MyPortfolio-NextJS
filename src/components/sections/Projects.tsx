@@ -14,7 +14,7 @@ export default function Projects() {
         category="Development"
         imageSrc="/Portfolio.webp"
         title="Portfolio"
-        description="Tbuttonever portfolio I made and my first task during my internship in Techstacks. I planned the early design using Figma, added a custom intro loading animation, and used my drawings for several components."
+        description="The first portfolio I made and my first task during my internship in Techstacks. I planned the early design using Figma, added a custom intro loading animation, and used my drawings for several components."
         tags={[
           "Next.js",
           "Tailwind CSS",
