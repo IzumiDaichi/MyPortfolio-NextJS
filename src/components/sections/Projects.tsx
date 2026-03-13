@@ -27,6 +27,15 @@ export default function Projects() {
           "Adobe Photoshop",
         ]}
         link="https://jakesoldportfolio.vercel.app/"></Card>
+
+        <Card
+        category="UI & UX Design"
+        imageSrc="/ElswordFigma.webp"
+        title="ELSWORD WEBSITE COPY in Figma"
+        description="A copy of the ELSWORD website I made in Figma to practice my UI & UX design skills. Only home page is complete. I plan to complete the rest of the pages in the future with fully functional prototype view."
+        tags={["Figma"
+        ]}
+        link="https://www.figma.com/design/gR7fKr5psqe506t8eRuq1L/Copy-of-ELSWORD-website?node-id=0-1&t=kMpvZXES1EhGktvV-1"></Card>
     </div>
     </div>
   );
