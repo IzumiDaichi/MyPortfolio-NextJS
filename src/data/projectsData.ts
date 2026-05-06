@@ -50,7 +50,7 @@ export const projects: Project[] = [
     description:
       "A design for an online store selling Korean merchandise, such as K-pop albums, lightsticks, and fan-made goods. This is a Prototype of the website that me and my groupmates made for our capstone project in college. We used Figma to design the UI and create a clickable prototype.",
     tags: ["Figma"],
-    link: "https://www.figma.com/design/gR7fKr5psqe506t8eRuq1L/Copy-of-ELSWORD-website?node-id=0-1&t=kMpvZXES1EhGktvV-1",
+    link: "https://www.figma.com/design/mZao40z4eofg9vxQL9vX0h/GA69-Korean-Merchandise?node-id=0-1&t=0j3LU1JBlT7MgjeU-1",
     status: "collab",
   },
   {
