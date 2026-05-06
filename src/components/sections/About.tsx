@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Tags from "@/components/ui/Tag/Tag";
 
@@ -13,9 +12,9 @@ export default function About() {
         <Image
           src="/Profile.webp"
           alt="Profile"
-          width={450}
-          height={450}
-          className="rounded-md lg:max-w-[500px] object-cover"
+          width={250}
+          height={250}
+          className="rounded-md lg:max-w-[500px] object-cover w-auto h-auto"
         />
         </div>
 
