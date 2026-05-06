@@ -36,6 +36,7 @@ export default function ProjectModal({
 }: ProjectModalProps) {
   const [projectIndex, setProjectIndex] = useState(initialIndex);
   const [slideIndex, setSlideIndex] = useState(0);
+  const [firstImageLoaded, setFirstImageLoaded] = useState(false);
 
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const imagesRef = useRef<string[]>([]);
@@ -64,22 +65,28 @@ export default function ProjectModal({
     }
   }, [hasNextProject]);
 
-  // Auto-carousel — only starts if not hovered
+  // Reset loaded state when project changes
+  useEffect(() => {
+    setFirstImageLoaded(false);
+    setSlideIndex(0);
+  }, [projectIndex]);
+
+  // Auto-carousel — only starts after first image is loaded and not hovered
   const resetInterval = useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
-    if (imagesRef.current.length > 1 && !isHoveredRef.current) {
+    if (imagesRef.current.length > 1 && !isHoveredRef.current && firstImageLoaded) {
       intervalRef.current = setInterval(() => {
         setSlideIndex((i) => (i + 1) % imagesRef.current.length);
-      }, 1300);
+      }, 1400);
     }
-  }, []);
+  }, [firstImageLoaded]);
 
   useEffect(() => {
     resetInterval();
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [projectIndex, resetInterval]);
+  }, [projectIndex, resetInterval, firstImageLoaded]);
 
   // Keyboard
   useEffect(() => {
@@ -147,7 +154,15 @@ export default function ProjectModal({
               resetInterval();
             }}
           >
-            <div className={styles.imageWrapper}>
+            {/* Loading spinner — shown until first image loads */}
+            {!firstImageLoaded && (
+              <div className={styles.loader}>
+                <div className={styles.spinner} />
+              </div>
+            )}
+
+            {/* Main image */}
+            <div className={`${styles.imageWrapper} ${!firstImageLoaded ? styles.hidden : ""}`}>
               <Image
                 key={images[slideIndex]}
                 src={images[slideIndex]}
@@ -157,10 +172,27 @@ export default function ProjectModal({
                 sizes="(max-width: 768px) 100vw, 60vw"
                 draggable={false}
                 priority
+                onLoad={() => setFirstImageLoaded(true)}
               />
             </div>
 
-            {images.length > 1 && (
+            {/* Preload all other images silently once first is loaded */}
+            {firstImageLoaded && images.map((src, i) =>
+              i !== slideIndex ? (
+                <Image
+                  key={`preload-${src}`}
+                  src={src}
+                  alt=""
+                  fill
+                  sizes="1px"
+                  className={styles.preload}
+                  priority
+                />
+              ) : null
+            )}
+
+            {/* Dot indicators */}
+            {images.length > 1 && firstImageLoaded && (
               <div className={styles.dots}>
                 {images.map((_, i) => (
                   <button
