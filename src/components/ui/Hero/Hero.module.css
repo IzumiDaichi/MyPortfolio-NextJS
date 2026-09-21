@@ -243,7 +243,7 @@
 .position {
   margin: 0;
 
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
 
   color: #111;
@@ -252,13 +252,14 @@
 .experience {
   margin: 2px 0 0;
 
-  font-size: 12px;
+  font-size: 14px;
 
   color: #111;
 }
 
 .experience a {
-  color: #1769aa;
+  color: #00ffb7;
+  text-shadow: 0px 2px 2px #22ce9d;
   text-decoration: underline;
   font-weight: 700;
 }
@@ -278,7 +279,7 @@
 
   border-radius: 4px;
 
-  background: #1769d1;
+  background: var(--accent);
   color: white;
 
   font-size: 11px;
@@ -302,7 +303,7 @@
 .downloadButton:hover {
   transform: translateY(-2px);
 
-  background: #0d58b8;
+  background: var(--accent2);
 
   box-shadow:
     0 6px 14px rgba(0, 0, 0, 0.25);
@@ -406,11 +407,11 @@
   }
 
   .position {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .experience {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .scrollIndicator {

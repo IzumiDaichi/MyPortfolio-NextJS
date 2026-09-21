@@ -9,9 +9,18 @@ const statusConfig: Record<
   ProjectStatus,
   { label: string; className: string }
 > = {
-  live: { label: "Live", className: "statusLive" },
-  wip: { label: "In progress", className: "statusWip" },
-  collab: { label: "Collab", className: "statusCollab" },
+  live: {
+    label: "Live",
+    className: "statusLive",
+  },
+  wip: {
+    label: "In progress",
+    className: "statusWip",
+  },
+  collab: {
+    label: "Collab",
+    className: "statusCollab",
+  },
 };
 
 export interface ModalProject {
@@ -52,6 +61,10 @@ export default function ProjectModal({
   const hasPrevProject = projectIndex > 0;
   const hasNextProject = projectIndex < projects.length - 1;
 
+  /* =========================
+     PROJECT NAVIGATION
+  ========================= */
+
   const goToPrevProject = useCallback(() => {
     if (!hasPrevProject) return;
 
@@ -66,10 +79,18 @@ export default function ProjectModal({
     setSlideIndex(0);
   }, [hasNextProject]);
 
+  /* =========================
+     RESET IMAGE
+  ========================= */
+
   useEffect(() => {
     setFirstImageLoaded(false);
     setSlideIndex(0);
   }, [projectIndex]);
+
+  /* =========================
+     AUTO SLIDESHOW
+  ========================= */
 
   const resetInterval = useCallback(() => {
     if (intervalRef.current) {
@@ -99,11 +120,23 @@ export default function ProjectModal({
     };
   }, [projectIndex, resetInterval, firstImageLoaded]);
 
+  /* =========================
+     KEYBOARD CONTROLS
+  ========================= */
+
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-      if (e.key === "ArrowLeft") goToPrevProject();
-      if (e.key === "ArrowRight") goToNextProject();
+      if (e.key === "Escape") {
+        onClose();
+      }
+
+      if (e.key === "ArrowLeft") {
+        goToPrevProject();
+      }
+
+      if (e.key === "ArrowRight") {
+        goToNextProject();
+      }
     };
 
     window.addEventListener("keydown", handler);
@@ -111,7 +144,15 @@ export default function ProjectModal({
     return () => {
       window.removeEventListener("keydown", handler);
     };
-  }, [onClose, goToPrevProject, goToNextProject]);
+  }, [
+    onClose,
+    goToPrevProject,
+    goToNextProject,
+  ]);
+
+  /* =========================
+     LOCK PAGE SCROLL
+  ========================= */
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -121,6 +162,10 @@ export default function ProjectModal({
     };
   }, []);
 
+  /* =========================
+     STATUS BADGES
+  ========================= */
+
   const badges = project.status
     ? Array.isArray(project.status)
       ? project.status
@@ -128,14 +173,20 @@ export default function ProjectModal({
     : [];
 
   return (
-    <div className={styles.overlay} onClick={onClose}>
+    <div
+      className={styles.overlay}
+      onClick={onClose}
+    >
       <div
         className={`${styles.modal} ${
           !hasImages ? styles.modalNoImage : ""
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Previous project */}
+        {/* =========================
+            PREVIOUS PROJECT
+        ========================= */}
+
         {hasPrevProject && (
           <button
             className={`${styles.cardNav} ${styles.cardNavLeft}`}
@@ -159,7 +210,10 @@ export default function ProjectModal({
           </button>
         )}
 
-        {/* Next project */}
+        {/* =========================
+            NEXT PROJECT
+        ========================= */}
+
         {hasNextProject && (
           <button
             className={`${styles.cardNav} ${styles.cardNavRight}`}
@@ -183,7 +237,10 @@ export default function ProjectModal({
           </button>
         )}
 
-        {/* Image slideshow */}
+        {/* =========================
+            IMAGE VIEWER
+        ========================= */}
+
         {hasImages && (
           <div
             className={styles.imageSection}
@@ -199,11 +256,44 @@ export default function ProjectModal({
               resetInterval();
             }}
           >
+            {/* =========================
+                TITLE + STATUS
+            ========================= */}
+
+            <div className={styles.projectHeader}>
+              <h2 className={styles.title}>
+                {project.title}
+              </h2>
+
+              {badges.length > 0 && (
+                <div className={styles.badgeRow}>
+                  {badges.map((status) => (
+                    <span
+                      key={status}
+                      className={`${styles.badge} ${
+                        styles[statusConfig[status].className]
+                      }`}
+                    >
+                      {statusConfig[status].label}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* =========================
+                LOADER
+            ========================= */}
+
             {!firstImageLoaded && (
               <div className={styles.loader}>
                 <div className={styles.spinner} />
               </div>
             )}
+
+            {/* =========================
+                IMAGE
+            ========================= */}
 
             <div
               className={`${styles.imageWrapper} ${
@@ -213,43 +303,36 @@ export default function ProjectModal({
               <Image
                 key={images[slideIndex]}
                 src={images[slideIndex]}
-                alt={`${project.title} screenshot ${slideIndex + 1}`}
+                alt={`${project.title} screenshot ${
+                  slideIndex + 1
+                }`}
                 fill
                 className={styles.image}
-                sizes="(max-width: 768px) 100vw, 700px"
+                sizes="(max-width: 640px) 100vw, 1000px"
                 draggable={false}
-                priority
+                loading="lazy"
                 onLoad={() => setFirstImageLoaded(true)}
               />
             </div>
 
-            {/* Preload other images */}
-            {firstImageLoaded &&
-              images.map((src, index) =>
-                index !== slideIndex ? (
-                  <Image
-                    key={`preload-${src}`}
-                    src={src}
-                    alt=""
-                    fill
-                    sizes="1px"
-                    className={styles.preload}
-                    priority
-                  />
-                ) : null
-              )}
+            {/* =========================
+                SLIDE DOTS
+            ========================= */}
 
-            {/* Slide dots */}
             {images.length > 1 && firstImageLoaded && (
               <div className={styles.dots}>
                 {images.map((_, index) => (
                   <button
                     key={index}
                     className={`${styles.dot} ${
-                      index === slideIndex ? styles.dotActive : ""
+                      index === slideIndex
+                        ? styles.dotActive
+                        : ""
                     }`}
                     onClick={() => setSlideIndex(index)}
-                    aria-label={`Go to image ${index + 1}`}
+                    aria-label={`Go to image ${
+                      index + 1
+                    }`}
                   />
                 ))}
               </div>
@@ -257,31 +340,34 @@ export default function ProjectModal({
           </div>
         )}
 
-        {/* Title + status */}
-        <div
-          className={`${styles.details} ${
-            !hasImages ? styles.detailsOnly : ""
-          }`}
-        >
-          <div className={styles.projectHeader}>
-            <h2 className={styles.title}>{project.title}</h2>
+        {/* =========================
+            NO IMAGE STATE
+        ========================= */}
 
-            {badges.length > 0 && (
-              <div className={styles.badgeRow}>
-                {badges.map((status) => (
-                  <span
-                    key={status}
-                    className={`${styles.badge} ${
-                      styles[statusConfig[status].className]
-                    }`}
-                  >
-                    {statusConfig[status].label}
-                  </span>
-                ))}
-              </div>
-            )}
+        {!hasImages && (
+          <div className={styles.noImageContent}>
+            <div className={styles.projectHeader}>
+              <h2 className={styles.title}>
+                {project.title}
+              </h2>
+
+              {badges.length > 0 && (
+                <div className={styles.badgeRow}>
+                  {badges.map((status) => (
+                    <span
+                      key={status}
+                      className={`${styles.badge} ${
+                        styles[statusConfig[status].className]
+                      }`}
+                    >
+                      {statusConfig[status].label}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

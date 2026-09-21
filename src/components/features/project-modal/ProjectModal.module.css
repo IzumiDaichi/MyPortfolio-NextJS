@@ -1,6 +1,11 @@
+/* =========================
+   OVERLAY
+========================= */
+
 .overlay {
   position: fixed;
   inset: 0;
+
   z-index: 100;
 
   display: flex;
@@ -9,7 +14,8 @@
 
   padding: 1rem;
 
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.78);
+
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
@@ -29,34 +35,24 @@
 
 /* =========================
    MODAL
-   ========================= */
+========================= */
 
 .modal {
   position: relative;
 
-  width: 100%;
-  max-width: 700px;
-  max-height: 90vh;
+  width: min(1000px, 92vw);
+  height: min(700px, 88vh);
 
   display: flex;
-  flex-direction: column;
 
-  background: var(--background);
+  background: #000;
 
-  border: 1px solid #e5e5e5;
+  border: 1px solid #333;
   border-radius: 14px;
 
   overflow: hidden;
 
   animation: slideUp 0.18s ease;
-}
-
-:global(.dark) .modal {
-  border-color: #333;
-}
-
-.modalNoImage {
-  max-width: 480px;
 }
 
 @keyframes slideUp {
@@ -71,63 +67,23 @@
   }
 }
 
+.modalNoImage {
+  height: auto;
+  min-height: 160px;
 
-/* =========================
-   PROJECT NAVIGATION
-   ========================= */
-
-.cardNav {
-  position: fixed;
-  top: 50%;
-
-  z-index: 101;
-
-  width: 40px;
-  height: 40px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-
-  background: rgba(0, 0, 0, 0.45);
-  color: #fff;
-
-  cursor: pointer;
-
-  transform: translateY(-50%);
-
-  transition:
-    background 0.15s ease,
-    transform 0.15s ease;
-}
-
-.cardNav:hover {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.cardNavLeft {
-  left: 8px;
-}
-
-.cardNavRight {
-  right: 8px;
+  background: var(--background);
 }
 
 
 /* =========================
-   IMAGE
-   ========================= */
+   IMAGE SECTION
+========================= */
 
 .imageSection {
   position: relative;
 
   width: 100%;
-  height: 420px;
-
-  flex-shrink: 0;
+  height: 100%;
 
   display: flex;
   align-items: center;
@@ -135,14 +91,20 @@
 
   background: #000;
 
-  touch-action: pan-y;
-  user-select: none;
-
   overflow: hidden;
+
+  user-select: none;
+  touch-action: pan-y;
 }
 
+
+/* =========================
+   IMAGE
+========================= */
+
 .imageWrapper {
-  position: relative;
+  position: absolute;
+  inset: 0;
 
   width: 100%;
   height: 100%;
@@ -174,140 +136,52 @@
 
 
 /* =========================
-   LOADER
-   ========================= */
-
-.loader {
-  position: absolute;
-  inset: 0;
-
-  z-index: 2;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.spinner {
-  width: 32px;
-  height: 32px;
-
-  border: 3px solid rgba(255, 255, 255, 0.15);
-  border-top-color: rgba(255, 255, 255, 0.7);
-
-  border-radius: 50%;
-
-  animation: spin 0.7s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-/* =========================
-   PRELOAD
-   ========================= */
-
-.preload {
-  position: absolute;
-
-  width: 1px !important;
-  height: 1px !important;
-
-  opacity: 0;
-  pointer-events: none;
-
-  z-index: -1;
-}
-
-
-/* =========================
-   SLIDE DOTS
-   ========================= */
-
-.dots {
-  position: absolute;
-
-  bottom: 12px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  display: flex;
-  gap: 6px;
-
-  z-index: 2;
-}
-
-.dot {
-  width: 7px;
-  height: 7px;
-
-  padding: 0;
-
-  border: none;
-  border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.35);
-
-  cursor: pointer;
-
-  transition:
-    background 0.15s ease,
-    transform 0.15s ease;
-}
-
-.dot:hover {
-  background: rgba(255, 255, 255, 0.7);
-}
-
-.dotActive {
-  background: #fff;
-  transform: scale(1.25);
-}
-
-
-/* =========================
-   TITLE + STATUS
-   ========================= */
-
-.details {
-  width: 100%;
-
-  padding: 1rem 1.25rem;
-
-  display: flex;
-  align-items: center;
-}
-
-.detailsOnly {
-  padding: 1.25rem;
-}
+   TITLE
+========================= */
 
 .projectHeader {
-  width: 100%;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 5;
 
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 
   gap: 8px;
+
+  padding: 18px 20px 40px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.72),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 .title {
   margin: 0;
 
-  font-size: 17px;
+  color: #fff;
+
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.3;
 }
 
+
+/* =========================
+   STATUS BADGES
+========================= */
+
 .badgeRow {
   display: flex;
   flex-wrap: wrap;
+
   gap: 6px;
 }
 
@@ -357,8 +231,161 @@
 
 
 /* =========================
-   SMALL SCREENS
-   ========================= */
+   LOADER
+========================= */
+
+.loader {
+  position: absolute;
+  inset: 0;
+
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 34px;
+  height: 34px;
+
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-top-color: rgba(255, 255, 255, 0.75);
+
+  border-radius: 50%;
+
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================
+   SLIDE DOTS
+========================= */
+
+.dots {
+  position: absolute;
+
+  left: 50%;
+  bottom: 16px;
+
+  z-index: 5;
+
+  display: flex;
+  gap: 7px;
+
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.dotActive {
+  background: #fff;
+
+  transform: scale(1.3);
+}
+
+
+/* =========================
+   PROJECT NAVIGATION
+========================= */
+
+.cardNav {
+  position: fixed;
+
+  top: 50%;
+
+  z-index: 110;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  color: #fff;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.cardNav:hover {
+  background: rgba(0, 0, 0, 0.75);
+
+  transform: translateY(-50%) scale(1.05);
+}
+
+.cardNavLeft {
+  left: 12px;
+}
+
+.cardNavRight {
+  right: 12px;
+}
+
+
+/* =========================
+   NO IMAGE
+========================= */
+
+.noImageContent {
+  width: 100%;
+
+  padding: 1.5rem;
+}
+
+.noImageContent .projectHeader {
+  position: relative;
+
+  padding: 0;
+
+  background: none;
+}
+
+.noImageContent .title {
+  color: inherit;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 640px) {
   .overlay {
@@ -366,16 +393,19 @@
   }
 
   .modal {
-    max-width: 100%;
-    max-height: 95vh;
+    width: 100%;
+    height: 55vh;
+
+    max-width: none;
+    max-height: none;
+
+    border-radius: 12px;
   }
 
-  .imageSection {
-    height: 240px;
-  }
+  .projectHeader {
+    padding: 14px 14px 32px;
 
-  .details {
-    padding: 1rem;
+    gap: 6px;
   }
 
   .title {
@@ -384,5 +414,23 @@
 
   .badge {
     font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .dots {
+    bottom: 12px;
+  }
+
+  .cardNav {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cardNavLeft {
+    left: 6px;
+  }
+
+  .cardNavRight {
+    right: 6px;
   }
 }

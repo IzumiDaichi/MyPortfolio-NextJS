@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --card-background: #eeeeee;
+  --tag-background: var(--background);
   --border: 1px solid rgba(0, 0, 0, 0.1);
   --border2: 1px solid rgba(0, 0, 0, 0.25);
   --accent: #393b77;
@@ -21,6 +22,7 @@
 .dark {
   --background: #21212e;
   --card-background: rgba(0, 0, 0, 0.2);
+  --tag-background: #dddde6f3;
   --foreground: white;
   --foreground2: #333;
   --banner-brightness: 70%;
