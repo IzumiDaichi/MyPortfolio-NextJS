@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import ThemeToggle from "../ThemeToggle";
+import ThemeToggle from "../../features/ThemeToggle";
 import { useScrollEffect } from "./useScrollEffect";
 import NavLinks from "./NavLinks";
 import BurgerMenu from "./BurgerMenu";
@@ -12,7 +12,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [dark, setDark] = useState(false);
   const scrolled = useScrollEffect(80);
-  const sections = ["home", "about", "projects", "contact"];
+  const sections = ["home", "projects", "contact"];
 
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {

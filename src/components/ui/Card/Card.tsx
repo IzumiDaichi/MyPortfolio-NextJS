@@ -4,7 +4,9 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Tags from "@/components/ui/Tag/Tag";
-import ProjectModal, { type ModalProject } from "@/components/ui/Modal/ProjectModal";
+import ProjectModal, {
+  type ModalProject,
+} from "@/components/features/project-modal/ProjectModal";
 import styles from "./Card.module.css";
 import type { ProjectStatus } from "@/data/projectsData";
 
@@ -20,10 +22,22 @@ interface CardProps {
   projectIndex: number;
 }
 
-const statusConfig: Record<ProjectStatus, { label: string; className: string }> = {
-  live:   { label: "Live",        className: "statusLive"   },
-  wip:    { label: "In progress", className: "statusWip"    },
-  collab: { label: "Collab",      className: "statusCollab" },
+const statusConfig: Record<
+  ProjectStatus,
+  { label: string; className: string }
+> = {
+  live: {
+    label: "Live",
+    className: "statusLive",
+  },
+  wip: {
+    label: "In progress",
+    className: "statusWip",
+  },
+  collab: {
+    label: "Collab",
+    className: "statusCollab",
+  },
 };
 
 export default function Card({
@@ -40,7 +54,9 @@ export default function Card({
   const [modalOpen, setModalOpen] = useState(false);
 
   const badges = status
-    ? Array.isArray(status) ? status : [status]
+    ? Array.isArray(status)
+      ? status
+      : [status]
     : [];
 
   const thumbnail = images?.[0];
@@ -52,10 +68,18 @@ export default function Card({
         onClick={() => setModalOpen(true)}
         role="button"
         tabIndex={0}
-        onKeyDown={(e) => e.key === "Enter" && setModalOpen(true)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setModalOpen(true);
+          }
+        }}
         aria-label={`Open ${title}`}
       >
-        {/* Thumbnail */}
+        {/* =========================
+            THUMBNAIL
+        ========================= */}
+
         <div className={styles.thumbnailWrapper}>
           {thumbnail ? (
             <div className={styles.imageWrapper}>
@@ -64,39 +88,68 @@ export default function Card({
                 alt={title}
                 fill
                 className={styles.image}
-                sizes="(max-width: 768px) 100vw, 480px"
-                priority
+                sizes="(max-width: 640px) 100vw, 50vw"
+                loading="lazy"
               />
+
               <div className={styles.imageOverlay}>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round">
-                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#fff"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M15 3h6v6" />
+                  <path d="M9 21H3v-6" />
+                  <path d="M21 3l-7 7" />
+                  <path d="M3 21l7-7" />
                 </svg>
               </div>
             </div>
           ) : (
             <div className={styles.noImageThumb} />
           )}
-
-          {badges.length > 0 && (
-            <div className={styles.badgeOverlay}>
-              {badges.map((s) => (
-                <span key={s} className={`${styles.badge} ${styles[statusConfig[s].className]}`}>
-                  {statusConfig[s].label}
-                </span>
-              ))}
-            </div>
-          )}
         </div>
 
-        {/* Body */}
+        {/* =========================
+            BODY
+        ========================= */}
+
         <div className={styles.body}>
-          <h3 className={styles.title}>{title}</h3>
+          {/* Title + Status */}
+          <div className={styles.projectHeader}>
+            <h3 className={styles.title}>{title}</h3>
+
+            {badges.length > 0 && (
+              <div className={styles.statusRow}>
+                {badges.map((s) => (
+                  <span
+                    key={s}
+                    className={`${styles.badge} ${
+                      styles[statusConfig[s].className]
+                    }`}
+                  >
+                    {statusConfig[s].label}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Description */}
           <p className={styles.description}>{description}</p>
 
+          {/* Tags */}
           <div className={styles.tagsRow}>
             <Tags tags={tags} />
           </div>
 
+          {/* Visit Button */}
           {link && (
             <div className={styles.footer}>
               <Link
@@ -107,8 +160,21 @@ export default function Card({
                 onClick={(e) => e.stopPropagation()}
               >
                 {linkLabel}
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
-                  <path d="M2 8L8 2M8 2H4M8 2V6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+
+                <svg
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2 8L8 2M8 2H4M8 2V6"
+                    stroke="currentColor"
+                    strokeWidth="1.4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </Link>
             </div>
@@ -116,6 +182,7 @@ export default function Card({
         </div>
       </div>
 
+      {/* Project Modal */}
       {modalOpen && (
         <ProjectModal
           projects={allProjects}

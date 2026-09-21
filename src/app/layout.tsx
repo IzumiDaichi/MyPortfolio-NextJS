@@ -1,15 +1,7 @@
 import type { Metadata } from "next";
-import { Poppins} from "next/font/google";
 import "./globals.css";
 import NavigationBar from "../components/layout/NavigationBar/NavigationBar"
 import Footer from '@/components/layout/Footer/Footer'
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["400" , "700"],
-  style: ["normal", "italic"],
-});
 
 export const metadata: Metadata = {
   title: "MyPortfolio",
@@ -23,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} antialiased`}
-      >
+      <body>
         <NavigationBar/>
         {children}
         <Footer/>

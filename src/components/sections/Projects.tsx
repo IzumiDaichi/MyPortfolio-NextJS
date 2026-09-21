@@ -1,4 +1,4 @@
-import ProjectTabs from "@/components/sections/ProjectTabs";
+import ProjectTabs from "@/components/features/project-filter/ProjectFilterTabs";
 
 export default function Projects() {
   return (

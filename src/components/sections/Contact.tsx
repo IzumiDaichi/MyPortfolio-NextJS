@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import CopyText from "@/components/ui/CopyText";
+import CopyText from "@/components/features/CopyText";
 import Image from "next/image";
 
 export default function Contact() {
