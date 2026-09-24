@@ -3,13 +3,17 @@
 import { useEffect, useState } from "react";
 
 // --- Tuning knobs ---
-const STAR_PATH = (c) => `/loading-stars/Star ${c}.png`;
+const STAR_PATH = (c: string) => `/loading-stars/Star ${c}.png`;
 const COLORS_ORDER = ["orange", "blue", "green", "purple"];
 const BOUNCE_SECONDS = 1.1; // seconds per bounce cycle
 const STAGGER_SECONDS = 0.15; // delay between each star's bounce, creates the "wave"
 const SHINE_SECONDS = 2.2; // seconds per shine sweep
 
-export default function StarsRowLoadingScreen({ onFinished }) {
+type StarsRowLoadingScreenProps = {
+  onFinished?: () => void;
+};
+
+export default function StarsRowLoadingScreen({ onFinished }: StarsRowLoadingScreenProps) {
   const [pageLoaded, setPageLoaded] = useState(false);
   const [exiting, setExiting] = useState(false);
 
