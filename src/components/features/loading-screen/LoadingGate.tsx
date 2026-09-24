@@ -3,7 +3,11 @@
 import { useState } from "react";
 import StarLoadingScreen from "./LoadingAnimation";
 
-export default function LoadingGate({ children }) {
+type LoadingGateProps = {
+  children: React.ReactNode;
+};
+
+export default function LoadingGate({ children }: LoadingGateProps) {
   const [loading, setLoading] = useState(true);
 
   return (
