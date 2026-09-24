@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import LoadingGate from "@/components/features/loading-screen/LoadingGate";
 import NavigationBar from "../components/layout/NavigationBar/NavigationBar"
 import Footer from '@/components/layout/Footer/Footer'
 
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <LoadingGate>
         <NavigationBar/>
         {children}
         <Footer/>
+        </LoadingGate>
       </body>
     </html>
   );
